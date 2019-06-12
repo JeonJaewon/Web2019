@@ -102,6 +102,17 @@ nav ul li a:focus {
 #gameenginespace a:visited{
 	color: white;
 }
+#gameenginespace a:hover{
+	color: #c8cace;
+}
+
+#gameengineButton{
+	color: white;
+}
+#gameengineButton:hover{
+	color: #c8cace;
+}
+
 #esportsspace img{
 	height: 100%;
 	display: block;
