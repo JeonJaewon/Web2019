@@ -83,32 +83,43 @@ $(window).ready(function(){
 $("div.small_article").click(function(){
  		var winWidth=$(window).width()*0.85;
 	 	var winHeight=$(window).height()*0.8;
- 		var indexNum=$(this).index();
- 		for(var i=0; i<4; i++){
- 			var index=i+1;
- 			if(i==indexNum){
- 				switch(index){
-	 					case 1:$("div.small_article:nth-child("+index+")")
-	 				.animate({height:winHeight, width:winWidth},1000,"swing");
-	 				break;
-	 					case 2:$("div.small_article:nth-child("+index+")")
-	 				.animate({height:winHeight, width:winWidth, left:"40px"},1000,"swing");
-	 				break;
-	 					case 3:$("div.small_article:nth-child("+index+")")
-	 				.animate({height:winHeight, width:winWidth, top:"20px"},1000,"swing");
-	 				break;
-	 					case 4:$("div.small_article:nth-child("+index+")")
-	 				.animate({height:winHeight, width:winWidth, left:"40px", top:"20px"},1000,"swing");
-	 				break;
-	 				}
- 				}
- 			else{
- 				$("div.small_article:nth-child("+index+")").css("display","none");
- 			}
- 		}
+ 		var indexNum=$(this).index()+1;	
+ 		// $("div.small_article").css("display","none");
+ 		//  $("div.small_article:nth-child("+indexNum+")").css("display","block");
+ 		// for(var i=0; i<4; i++){
+ 		// 	var index=i+1;
+ 			// if(i==indexNum){
+		switch(indexNum){
+				case 1:$("div.small_article:nth-child("+indexNum+")")
+			.animate({height:winHeight, width:winWidth},1000,"swing");
+				$("#article2").fadeOut();
+				$("#article3").fadeOut();
+				$("#article4").fadeOut();
+			break;
+				case 2:$("div.small_article:nth-child("+indexNum+")")
+			.animate({height:winHeight, width:winWidth, left:"40px"},1000,"swing");
+				$("#article1").fadeOut();
+				$("#article3").fadeOut();
+				$("#article4").fadeOut();
+			break;
+				case 3:$("div.small_article:nth-child("+indexNum+")")
+			.animate({height:winHeight, width:winWidth, top:"20px"},1000,"swing");
+				$("#article1").fadeOut();
+				$("#article2").fadeOut();
+				$("#article4").fadeOut();
+			break;
+				case 4:$("div.small_article:nth-child("+indexNum+")")
+			.animate({height:winHeight, width:winWidth, left:"40px", top:"20px"},1000,"swing");
+				$("#article1").fadeOut();
+				$("#article2").fadeOut();
+				$("#article3").fadeOut();
+			break;
+		}
+			// }else{
+ 		// 		$("div.small_article:nth-child("+index+")").css("display","none");
+ 		// 	}
+ 		// }
  	});
-
-
 });
 
 $(window).scroll(function(){  
