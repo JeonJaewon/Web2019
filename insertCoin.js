@@ -98,7 +98,7 @@ $(window).ready(function(){
 	$("#week").text(w);
 
 	$("#esportsbutton").click(function(){
-		$('html,body').animate({ scrollTop : $("#partition4").offset().top } , 400);
+		$('html,body').animate({ scrollTop : $("#partition4").offset().top } , 1000);
 	});
 /////////////////////////////////////////////////////////////////////////bina added end/////////////////////////////
 
