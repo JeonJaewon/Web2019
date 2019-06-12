@@ -1,3 +1,5 @@
+	
+	var cSwitch1001=false;
 
 $(function(){
 
@@ -11,9 +13,15 @@ $(function(){
 	});
 
 	$("#article1").click(function(){
+		
 		var temp_watch=DB_getWatchCount(temp_cID);
+
+		if(cSwitch1001==false){
+		cSwitch1001=true;
 		temp_watch++;
-		$("#watch1").text(temp_watch);
 		DB_setWatchCount(temp_cID,temp_watch);
+		}
+
+		$("#watch1").text(temp_watch);
 	});
 });
