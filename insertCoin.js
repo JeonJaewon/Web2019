@@ -159,6 +159,10 @@ $("html").click(function(e){
 	 //}
 });
 
+var esports_contents = $.getJSON({url:"json_content_1005.txt"});
+esports_contents.done(function(data, status){
+	$("thumbnail_4_1").append(esports_contents.title).append(esports_contents.cURL[0]);
+});
 
 
 	//슬라이드쇼 함수들
@@ -173,7 +177,7 @@ $("html").click(function(e){
 			var id="#slide"+(slideIndex+1);
 			$(id).fadeIn(700);
 		},700)
-	})
+	});
 
 	$("#left_arrow").click(function(){ //슬라이드쇼 왼쪽 화살표 클릭
 		$("img.slide").fadeOut(700)
