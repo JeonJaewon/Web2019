@@ -79,7 +79,7 @@ img{border:0;}
 	height:400px;
 	text-align:center;
 	background-color: white;
-	border:1px dotted black;
+	/*border:1px dotted black;*/
 	z-index: 10;
 }
 .article_title{
@@ -87,13 +87,17 @@ img{border:0;}
 	width:45%;
 	height:30px;
 	line-height: 30px;
-	background-color: rgba(236, 54, 66, 1);	
+	/*background-color: rgba(236, 54, 66, 1);	*/
+	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,90,1) 0%, rgba(238,79,119,1) 79%, rgba(238,79,138,1) 100%);
+
+
 }
 .article_thumbnail{
 	height: 70%;
 	width: 95%;
 	margin:0 auto;
-	background-color: rgba(236, 54, 66, 1);
+	/*background-color: rgba(236, 54, 66, 1);*/
+	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,138,1) 0%, rgba(238,79,119,1) 21%, rgba(238,79,90,1) 100%);
 }
 .article_content{
 	display: none;
