@@ -108,6 +108,7 @@ $(window).ready(function(){
 		$('html,body').animate({ scrollTop : $("#partition1").offset().top } , 1000);
 	});
 $("html").click(function(e){
+
 	 if(!$(e.target).hasClass("small_article")){
 		// if(article_expanded){
 		// 	article_expanded=false;
@@ -160,9 +161,10 @@ $("html").click(function(e){
 
 
 
+
 	//슬라이드쇼 함수들
 	$("#right_arrow").click(function(){ //슬라이드쇼 오른쪽 화살표 클릭
-		$("img.slide").fadeOut(700)
+		$("img.slide").fadeOut(700);
 		setTimeout(function() {
 			if(slideIndex < mainSlides.length-1){
 				slideIndex++;
@@ -172,7 +174,7 @@ $("html").click(function(e){
 			var id="#slide"+(slideIndex+1);
 			$(id).fadeIn(700);
 		},700)
-	})
+	});
 
 	$("#left_arrow").click(function(){ //슬라이드쇼 왼쪽 화살표 클릭
 		$("img.slide").fadeOut(700)
@@ -185,44 +187,132 @@ $("html").click(function(e){
 			var id="#slide"+(slideIndex+1);
 			$(id).fadeIn(700);
 		},700)
-	})
+	});
 
 $("div.small_article").click(function(){
 
-	
-		article_expanded=true;
+
  		var winWidth=$(window).width()*0.85;
 	 	var winHeight=$(window).height()*0.8;
  		var indexNum=$(this).index()+1;	
- 		// $("div.small_article").css("display","none");
- 		//  $("div.small_article:nth-child("+indexNum+")").css("display","block");
- 		// for(var i=0; i<4; i++){
- 		// 	var index=i+1;
- 			// if(i==indexNum){
-	switch(indexNum){
-				case 1:$("div.small_article:nth-child("+indexNum+")")
-			.animate({height:winHeight, width:winWidth},1000,"swing");
-				$(".article2").fadeOut();
-				$(".article3").fadeOut();
-				$(".article4").fadeOut();
+
+ 		var now_small_article=$("div.small_article:nth-of-type("+indexNum+")");
+ 		// var ind=$(this).index()+1; //몇번째 뉴스인지 찾는다
+      	var parInd=$(this).parent().index()-8; //몇번째 article_partition인지 찾는다. 왜 8빼야 되는지는 모르겠는데 아무튼됨
+ 		var now_parent=$("div.article_partition:nth-of-type("+parInd+")");
+
+	switch(parInd){
+				case 1:
+				switch(indexNum){
+					case 1:
+						$("#article1-1").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article1-2").fadeOut();
+						$("#article1-3").fadeOut();
+						$("#article1-4").fadeOut();
+					break;
+					case 2:
+						$("#article1-2").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article1-1").fadeOut();
+						$("#article1-3").fadeOut();
+						$("#article1-4").fadeOut();
+					break;
+					case 3:
+						$("#article1-3").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article1-1").fadeOut();
+						$("#article1-2").fadeOut();
+						$("#article1-4").fadeOut();
+					break;
+					case 4:
+						$("#article1-4").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article1-1").fadeOut();
+						$("#article1-3").fadeOut();
+						$("#article1-2").fadeOut();
+					break;
+				}
 			break;
-				case 2:$("div.small_article:nth-child("+indexNum+")")
-			.animate({height:winHeight, width:winWidth, left:"40px"},1000,"swing");
-				$(".article1").fadeOut();
-				$(".article3").fadeOut();
-				$(".article4").fadeOut();
+				case 2:
+					switch(indexNum){
+					case 1:
+						$("#article2-1").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article2-2").fadeOut();
+						$("#article2-3").fadeOut();
+						$("#article2-4").fadeOut();
+					break;
+					case 2:
+						$("#article2-2").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article2-1").fadeOut();
+						$("#article2-3").fadeOut();
+						$("#article2-4").fadeOut();
+					break;
+					case 3:
+						$("#article2-3").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article2-1").fadeOut();
+						$("#article2-2").fadeOut();
+						$("#article2-4").fadeOut();
+					break;
+					case 4:
+						$("#article2-4").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article2-1").fadeOut();
+						$("#article2-3").fadeOut();
+						$("#article2-2").fadeOut();
+					break;
+				}
 			break;
-				case 3:$("div.small_article:nth-child("+indexNum+")")
-			.animate({height:winHeight, width:winWidth, top:"20px"},1000,"swing");
-				$(".article1").fadeOut();
-				$(".article2").fadeOut();
-				$(".article4").fadeOut();
+				case 3:
+				switch(indexNum){
+					case 1:
+						$("#article3-1").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article3-2").fadeOut();
+						$("#article3-3").fadeOut();
+						$("#article3-4").fadeOut();
+					break;
+					case 2:
+						$("#article3-2").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article3-1").fadeOut();
+						$("#article3-3").fadeOut();
+						$("#article3-4").fadeOut();
+					break;
+					case 3:
+						$("#article3-3").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article3-1").fadeOut();
+						$("#article3-2").fadeOut();
+						$("#article3-4").fadeOut();
+					break;
+					case 4:
+						$("#article3-4").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article3-1").fadeOut();
+						$("#article3-3").fadeOut();
+						$("#article3-2").fadeOut();
+					break;
+				}
 			break;
-				case 4:$("div.small_article:nth-child("+indexNum+")")
-			.animate({height:winHeight, width:winWidth, left:"40px", top:"20px"},1000,"swing");
-				$(".article1").fadeOut();
-				$(".article2").fadeOut();
-				$(".article3").fadeOut();
+				case 4:
+				switch(indexNum){
+					case 1:
+						$("#article4-1").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article4-2").fadeOut();
+						$("#article4-3").fadeOut();
+						$("#article4-4").fadeOut();
+					break;
+					case 2:
+						$("#article4-2").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article4-1").fadeOut();
+						$("#article4-3").fadeOut();
+						$("#article4-4").fadeOut();
+					break;
+					case 3:
+						$("#article4-3").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article4-1").fadeOut();
+						$("#article4-2").fadeOut();
+						$("#article4-4").fadeOut();
+					break;
+					case 4:
+						$("#article4-4").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article4-1").fadeOut();
+						$("#article4-3").fadeOut();
+						$("#article4-2").fadeOut();
+					break;
+				}
 			break;
 		}
  				
@@ -235,13 +325,11 @@ $("div.small_article").click(function(){
 });
 
 
-
 $(window).scroll(function(){  
 	var position = $(window).scrollTop()+$(window).height();
 	$("#settings_button").stop().animate({ top : position - 100 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
 	$("#up_arrow_button").stop().animate({ top : position - 170 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
 	$("#night_mode_button").stop().animate({ top : position - 240 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
-
 });	
 
 $(window).resize(function(){
@@ -249,6 +337,55 @@ $(window).resize(function(){
 	$("#settings_button").css("top", $(window).height() - 100 + "px")
 	$("#up_arrow_button").stop().animate({ top : position - 170 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
 	$("#night_mode_button").stop().animate({ top : position - 240 + "px" } , 700); 
-})
+});
 
+
+$("html").click(function(e){
+	if(!$(e.target).hasClass("small_article")){
+		// if(article_expanded){
+		// 	article_expanded=false;
+		
+		$("div.small_article").css("display","block");
+		$("div.small_article").css("width","45%");
+		$("div.small_article").css("height","35%");
+		$("#article1-1").css("left","1%");
+		$("#article1-2").css("top","1%");
+		$("#article1-2").css("left","50%");
+		$("#article1-2").css("top","1%");
+		$("#article1-3").css("top","40%");
+		$("#article1-3").css("left","1%");
+		$("#article1-4").css("left","50%");
+		$("#article1-4").css("top","40%");
+
+		$("#article2-1").css("left","1%");
+		$("#article2-1").css("top","1%");
+		$("#article2-2").css("left","50%");
+		$("#article2-2").css("top","1%");
+		$("#article2-3").css("top","40%");
+		$("#article2-3").css("left","1%");
+		$("#article2-4").css("left","50%");
+		$("#article2-4").css("top","40%");
+
+		$("#article3-1").css("left","1%");
+		$("#article3-1").css("top","1%");
+		$("#article3-2").css("left","50%");
+		$("#article3-2").css("top","1%");
+		$("#article3-3").css("top","40%");
+		$("#article3-3").css("left","1%");
+		$("#article3-4").css("left","50%");
+		$("#article3-4").css("top","40%");
+
+		$("#article4-1").css("left","1%");
+		$("#article4-1").css("top","1%");
+		$("#article4-2").css("left","50%");
+		$("#article4-2").css("top","1%");
+		$("#article4-3").css("top","40%");
+		$("#article4-3").css("left","1%");
+		$("#article4-4").css("left","50%");
+		$("#article4-4").css("top","40%");
+
+		}
+	
+	// }
+});
 
