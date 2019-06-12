@@ -72,6 +72,67 @@ nav ul li a:focus {
 
 	color: rgba(255, 80, 32, 1);
 }
+#esportsspace img{
+	height: 100%;
+	display: block;
+}
+
+#esportsspace{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+#esportsarticle{
+	width: 45%;
+	height: 100%;
+	background-color: white;
+	font-family: Arial,Helvetica,sans-serif;
+	position: absolute;
+	top:0;
+	right: 0;
+	text-align: center;
+}
+
+#checkout{
+	font-size: 25px;
+	font-family: avenir-lt-w01_35-light1475496, sans-serif;
+	color:darkgray;
+	margin-top: 20%;
+	margin-bottom: 8%;
+}
+#article_title{
+	font-size: 40px;
+	font-weight: bold;
+	color:black;
+	margin-bottom: 5%;
+}
+#article_title span{
+	color: #990099;
+}
+#article_text{
+	color: darkgray;
+	font-size:20px;
+	margin-bottom: 10%;
+}
+.article_menu{
+	color : black;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	width: 40%;
+	margin-bottom:3%; 
+	background-color: #f6f6f6;
+}
+#esportsbutton{
+	margin-left:auto;
+	margin-right: auto;
+	color :white;
+	width:40%;
+	padding :10px;
+	background-color: #990099;
+}
 
 /*슬라이드쇼 관련*/
 #slide_show{
