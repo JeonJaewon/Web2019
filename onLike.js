@@ -20,8 +20,9 @@ var cSwitch4004=false;
 
 $(function(){
 
-	$(".like").click(function(){ //like수 증가시키는 함수
-
+	$(".like").click(function(e){ //like수 증가시키는 함수
+		e.stopPropagation()
+			
 		var ind=$(this).closest(".small_article").index()+1; //몇번째 뉴스인지 찾는다
 		var parInd=($(this).closest(".article_partition").index()-9)*4; //몇번째 article_partition인지 찾는다. 왜 9빼야 되는지는 모르겠는데 아무튼됨
 
