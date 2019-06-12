@@ -1,3 +1,7 @@
+
+//waiting dates from json fiels...
+//override strings to push into part 1-1~1-4
+
 var string_title1_1="this is title1";
 var string_thumbnail1_1="this is thumbnail1";
 var string_content1_1="article_content1_1article_content1_1article_content1_1article_content1_1";
