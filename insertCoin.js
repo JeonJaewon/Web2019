@@ -106,7 +106,7 @@ $(window).ready(function(){
 
 	//슬라이드쇼 함수들
 	$("#right_arrow").click(function(){ //슬라이드쇼 오른쪽 화살표 클릭
-		$("img.slide").fadeOut(700)
+		$("img.slide").fadeOut(700);
 		setTimeout(function() {
 			if(slideIndex < mainSlides.length-1){
 				slideIndex++;
@@ -129,9 +129,10 @@ $(window).ready(function(){
 			var id="#slide"+(slideIndex+1);
 			$(id).fadeIn(700);
 		},700)
-	})
+	});
 
 $("div.small_article").click(function(){
+
 
 	$("div.article").click(function(){
 		var articleIndex=$(this).index()+1;
@@ -155,6 +156,7 @@ $("div.small_article").click(function(){
  		// for(var i=0; i<4; i++){
  		// 	var index=i+1;
  			// if(i==indexNum){
+
 	switch(indexNum){
 				case 1:$("div.small_article:nth-child("+indexNum+")")
 			.animate({height:winHeight, width:winWidth},1000,"swing");
@@ -190,12 +192,12 @@ $("div.small_article").click(function(){
  	});
 });
 
+
 $(window).scroll(function(){  
 	var position = $(window).scrollTop()+$(window).height();
 	$("#settings_button").stop().animate({ top : position - 100 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
 	$("#up_arrow_button").stop().animate({ top : position - 170 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
 	$("#night_mode_button").stop().animate({ top : position - 240 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
-
 });	
 
 $(window).resize(function(){
@@ -203,13 +205,14 @@ $(window).resize(function(){
 	$("#settings_button").css("top", $(window).height() - 100 + "px")
 	$("#up_arrow_button").stop().animate({ top : position - 170 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
 	$("#night_mode_button").stop().animate({ top : position - 240 + "px" } , 700); 
-})
+});
 
 
 $("html").click(function(e){
 	if(!$(e.target).hasClass("small_article")){
 		// if(article_expanded){
 		// 	article_expanded=false;
+		
 		$("div.small_article").css("display","block");
 		$("div.small_article").css("width","45%");
 		$("div.small_article").css("height","35%");
@@ -248,6 +251,7 @@ $("html").click(function(e){
 		$("#article4-3").css("left","1%");
 		$("#article4-4").css("left","50%");
 		$("#article4-4").css("top","40%");
+
 		}
 	
 	// }
