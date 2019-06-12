@@ -104,6 +104,9 @@ $(window).ready(function(){
 		$('html,body').animate({ scrollTop : $("#partition3").offset().top } , 1000);
 	});
 /////////////////////////////////////////////////////////////////////////bina added end/////////////////////////////
+	$("#newgamespace").click(function(){
+		$('html,body').animate({ scrollTop : $("#partition1").offset().top } , 1000);
+	});
 $("html").click(function(e){
 	 if(!$(e.target).hasClass("small_article")){
 		// if(article_expanded){
