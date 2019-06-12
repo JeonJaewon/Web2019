@@ -105,10 +105,18 @@ img{border:0;}
 .article_status{
 	position: absolute;
 	height: 20px;
-	width: 45%;
+	width: 20%;
 	right: 3%;
 	bottom: 3%;
-	background-color: black;
+	background-color: ivory;
+}
+.like_counter{
+	float: right;
+	height: 100%;
+}
+.watch_counter{
+	float: left;
+	height: 100%;
 }
 #article1{
 	position:absolute;

@@ -10,8 +10,8 @@ $(function(){
 
 		temp_like++;
 		DB_setLikeCount(temp_cID,temp_like);
+		$("#like1").text(temp_like);
 	});
-
 	$("#article1").click(function(){
 		
 		var temp_watch=DB_getWatchCount(temp_cID);
