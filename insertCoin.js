@@ -162,10 +162,10 @@ $("html").click(function(e){
 
 var esports_contents = $.ajax({url:"json_content_1005.txt",dataType : "json"});
 esports_contents.done(function(data, status){
-	$(".league_title").html(data.title); 
-	$("#team_img1").attr("src",data.cURL[0]);
-	$("#team_img2").attr("src",data.cURL[1]);
-	$(".league_desc").html(data.content[0]);
+	$("#match1.league_title").html(data.title); 
+	$("#match1.team_img1").attr("src",data.cURL[0]);
+	$("#match2.team_img2").attr("src",data.cPIC[1]);
+	$("#match2.league_desc").html(data.content[0]);
 });
 
 
