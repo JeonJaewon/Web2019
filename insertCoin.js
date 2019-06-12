@@ -1,4 +1,5 @@
 var NIGHT_MODE =false;
+var article_expanded=false;
 
 function onLightMode(){
 	if(!NIGHT_MODE){
@@ -83,6 +84,56 @@ $(window).ready(function(){
 	var w = now.getDate();
 	$("#week").text(w);
 /////////////////////////////////////////////////////////////////////////bina added end/////////////////////////////
+$("html").click(function(e){
+	 if(!$(e.target).hasClass("small_article")){
+		// if(article_expanded){
+		// 	article_expanded=false;
+		// if(article_expanded){
+		// 	article_expanded=false;
+			$("div.small_article").css("display","block");
+			$("div.small_article").css("width","45%");
+			$("div.small_article").css("height","35%");
+			$("#article1-1").css("left","1%");
+			$("#article1-2").css("top","1%");
+			$("#article1-2").css("left","50%");
+			$("#article1-2").css("top","1%");
+			$("#article1-3").css("top","40%");
+			$("#article1-3").css("left","1%");
+			$("#article1-4").css("left","50%");
+			$("#article1-4").css("top","40%");
+
+			$("#article2-1").css("left","1%");
+			$("#article2-1").css("top","1%");
+			$("#article2-2").css("left","50%");
+			$("#article2-2").css("top","1%");
+			$("#article2-3").css("top","40%");
+			$("#article2-3").css("left","1%");
+			$("#article2-4").css("left","50%");
+			$("#article2-4").css("top","40%");
+
+			$("#article3-1").css("left","1%");
+			$("#article3-1").css("top","1%");
+			$("#article3-2").css("left","50%");
+			$("#article3-2").css("top","1%");
+			$("#article3-3").css("top","40%");
+			$("#article3-3").css("left","1%");
+			$("#article3-4").css("left","50%");
+			$("#article3-4").css("top","40%");
+
+			$("#article4-1").css("left","1%");
+			$("#article4-1").css("top","1%");
+			$("#article4-2").css("left","50%");
+			$("#article4-2").css("top","1%");
+			$("#article4-3").css("top","40%");
+			$("#article4-3").css("left","1%");
+			$("#article4-4").css("left","50%");
+			$("#article4-4").css("top","40%");
+		}
+		//
+		 //}
+	
+	 //}
+});
 
 
 
@@ -115,20 +166,8 @@ $(window).ready(function(){
 
 $("div.small_article").click(function(){
 
-	$("div.article").click(function(){
-		var articleIndex=$(this).index()+1;
-		switch(articleIndex){
-			case 1:
-			case 2:
-			case 3:
-			case 4:
-			
-		}
-	})
-
-
-
-
+	
+		article_expanded=true;
  		var winWidth=$(window).width()*0.85;
 	 	var winHeight=$(window).height()*0.8;
  		var indexNum=$(this).index()+1;	
@@ -172,6 +211,8 @@ $("div.small_article").click(function(){
  	});
 });
 
+
+
 $(window).scroll(function(){  
 	var position = $(window).scrollTop()+$(window).height();
 	$("#up_arrow_button").stop().animate({ top : position - 100 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
@@ -186,49 +227,3 @@ $(window).resize(function(){
 })
 
 
-$("html").click(function(e){
-	if(!$(e.target).hasClass("small_article")){
-		// if(article_expanded){
-		// 	article_expanded=false;
-		$("div.small_article").css("display","block");
-		$("div.small_article").css("width","45%");
-		$("div.small_article").css("height","35%");
-		$("#article1-1").css("left","1%");
-		$("#article1-2").css("top","1%");
-		$("#article1-2").css("left","50%");
-		$("#article1-2").css("top","1%");
-		$("#article1-3").css("top","40%");
-		$("#article1-3").css("left","1%");
-		$("#article1-4").css("left","50%");
-		$("#article1-4").css("top","40%");
-
-		$("#article2-1").css("left","1%");
-		$("#article2-1").css("top","1%");
-		$("#article2-2").css("left","50%");
-		$("#article2-2").css("top","1%");
-		$("#article2-3").css("top","40%");
-		$("#article2-3").css("left","1%");
-		$("#article2-4").css("left","50%");
-		$("#article2-4").css("top","40%");
-
-		$("#article3-1").css("left","1%");
-		$("#article3-1").css("top","1%");
-		$("#article3-2").css("left","50%");
-		$("#article3-2").css("top","1%");
-		$("#article3-3").css("top","40%");
-		$("#article3-3").css("left","1%");
-		$("#article3-4").css("left","50%");
-		$("#article3-4").css("top","40%");
-
-		$("#article4-1").css("left","1%");
-		$("#article4-1").css("top","1%");
-		$("#article4-2").css("left","50%");
-		$("#article4-2").css("top","1%");
-		$("#article4-3").css("top","40%");
-		$("#article4-3").css("left","1%");
-		$("#article4-4").css("left","50%");
-		$("#article4-4").css("top","40%");
-		}
-	
-	// }
-});
