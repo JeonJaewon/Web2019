@@ -164,6 +164,121 @@ nav ul li a:focus {
 }
 /* bina added end */
 
+/*live article*/
+	/*	<div id="livearticle">
+			<div id="stream_now">STREAM NOW</div>
+			<div id="live_article_title">THIS-MONTH <br><span>RECOMMANDED</span> GAME STREAMER</div>
+			<div id= "live_article_text">
+				Who's your best Streamer?
+			</div>
+		</div>*/
+
+#livespace{
+	background-color:black;
+	height:150%;
+	width:100%;
+	position:relative;
+}
+@-webkit-keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+#livearticle{
+	margin:auto;
+	height:100%;
+	width:100%;
+	/*margin-top:15%;*/
+}
+#onair{
+	width:20%;
+	height:15%;
+	margin-left:8%;
+	margin-top:5%;
+	-webkit-animation-name: blinker;
+   -webkit-animation-duration: 0.8s;
+   -webkit-animation-iteration-count:infinite;
+   -webkit-animation-timing-function:ease-in-out;
+   -webkit-animation-direction: alternate;
+}
+#live_article_title{
+	font-size: 250%;
+	font-weight: bold;
+	color:ivory;
+	margin-left:10%;
+	/*margin-bottom: 5%;
+	margin-left:10%;*/
+}
+#live_article_title span{
+	font-size:140%;
+	color:orange;
+	text-align:center;
+	width:120%;
+
+}
+/*#live_article_text{
+	color: orange;
+	font-size:300%;
+	margin:3% 0 5% 30%;
+	/*margin-bottom: 10%;*/
+	/*color: rgb(199, 50, 35);*/
+	/*color:ivory;
+}*/
+#streamer{
+	margin:0 0 0 10%;
+	width:80%;
+	height:40%;
+}
+#game_streamer{
+	text-align:left;
+}
+.live_article_menu{
+	color : black;
+	font-weight: bold;
+	/*margin-left: auto;
+	margin-right: auto;*/
+	margin-left:10%;
+	padding: 10%;
+	width: 200%;
+	margin-bottom:20%; 
+	background-color: orange;
+	text-align:center;
+}
+.live_article_menu2{
+	/*margin-left:auto;
+	margin-right: auto;*/
+	color :orange;
+	width:200%;
+	padding :10%;
+	background-color: ivory;
+	text-align:center;
+	margin-left:10%;
+	font-weight: bold;
+
+}
+.live_article_menu3{
+	/*margin-left:auto;
+	margin-right: auto;*/
+	color :black;
+	width:200%;
+	padding :10%;
+	background-color: orange;
+	text-align:center;
+	margin-left:10%;
+	margin-top:20%;
+	font-weight: bold;
+
+}
+/*live article end*/
+#live_left{
+	float:left;
+	margin-left:7%;
+	margin-top:3%;
+}
+#live_right{
+	float:right;
+	margin-right:20%;
+	margin-top:5%;
+}
 
 /*슬라이드쇼 관련*/
 #slide_show{
