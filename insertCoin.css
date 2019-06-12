@@ -137,6 +137,9 @@ nav ul li a:focus {
 	padding :10px;
 	background-color: #990099;
 }
+#esportsbutton:hover{
+	cursor: pointer;
+}
 /* bina added end */
 
 
