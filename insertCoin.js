@@ -152,6 +152,31 @@ $(window).ready(function(){
 		$("#article1-4").css("left","50%");
 		$("#article1-4").css("top","40%");
 
+		$("#article2-1").css("left","1%");
+		$("#article2-1").css("top","1%");
+		$("#article2-2").css("left","50%");
+		$("#article2-2").css("top","1%");
+		$("#article2-3").css("top","40%");
+		$("#article2-3").css("left","1%");
+		$("#article2-4").css("left","50%");
+		$("#article2-4").css("top","40%");
+		$("#article3-1").css("left","1%");
+		$("#article3-1").css("top","1%");
+		$("#article3-2").css("left","50%");
+		$("#article3-2").css("top","1%");
+		$("#article3-3").css("top","40%");
+		$("#article3-3").css("left","1%");
+		$("#article3-4").css("left","50%");
+		$("#article3-4").css("top","40%");
+		$("#article4-1").css("left","1%");
+		$("#article4-1").css("top","1%");
+		$("#article4-2").css("left","50%");
+		$("#article4-2").css("top","1%");
+		$("#article4-3").css("top","40%");
+		$("#article4-3").css("left","1%");
+		$("#article4-4").css("left","50%");
+		$("#article4-4").css("top","40%");
+
 });
 
 
