@@ -387,6 +387,10 @@ nav ul li a:focus {
 	color: white;
 	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,138,1) 0%, rgba(238,79,119,1) 21%, rgba(238,79,90,1) 100%);
 }
+.article_thumbnail img{
+	height: 30%;
+	widows: 30%;
+}
 
 .article_content{
 	display: none;
@@ -447,7 +451,3 @@ nav ul li a:focus {
 	/*z-index:-1;*/
 }
 
-.team_img img {
-	width: 20%;
-	height: 20%;
-}
