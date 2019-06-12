@@ -49,17 +49,36 @@ $(window).ready(function(){
 	$("#newgame").click(function(){
 		$('html,body').animate({ scrollTop : $("#newgamespace").offset().top } , 400);
 	}); 
-		$("#gameengine").click(function(){
+	$("#gameengine").click(function(){
 		$('html,body').animate({ scrollTop : $("#gameenginespace").offset().top } , 400);
 	}); 
-			$("#live").click(function(){
+	$("#live").click(function(){
 		$('html,body').animate({ scrollTop : $("#livespace").offset().top } , 400);
 	}); 
-				$("#esports").click(function(){
+	$("#esports").click(function(){
 		$('html,body').animate({ scrollTop : $("#esportsspace").offset().top } , 400);
-	}); 
+	});
+	var now = new Date();
+	var s = now.getMonth();
+	switch(s){
+		case 0:s = "January";break;
+		case 1:s = "February";break;
+		case 2:s = "March";break;
+		case 3:s = "April";break;
+		case 4:s = 'May';break;
+		case 5:s = 'June';break;
+		case 6:s = 'July';break;
+		case 7:s = 'August';break;
+		case 8:s = 'September';break;
+		case 9:s = 'October';break;
+		case 10:s = 'November';break;
+		case 11:s = 'December';break;
+	}
 
+	$("#month").text(s);
 
+	var w = now.getDate();
+	$("#week").text(w);
 
 
 
