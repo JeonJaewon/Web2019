@@ -16,12 +16,13 @@ var DB;
  		DB = firebase.database();
  		DB_getLastContent();
  		setTimeout(initDB,1500);
-		setTimeout(showAllData,2500);
+		setTimeout(showAllData,3000);
+		//delay >3000;
 	});
 
 
    function initDB(){
-   		alert("init db");
+   		//alert("init db");
    		var cID="content_";
 		var forCount=DB_getLastContent();
 
