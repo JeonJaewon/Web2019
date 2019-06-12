@@ -104,7 +104,7 @@ $(window).ready(function(){
 		$('html,body').animate({ scrollTop : $("#partition3").offset().top } , 1000);
 	});
 /////////////////////////////////////////////////////////////////////////bina added end/////////////////////////////
-$("html").click(function(e){
+	$("html").click(function(e){
 	 if(!$(e.target).hasClass("small_article")){
 		// if(article_expanded){
 		// 	article_expanded=false;
