@@ -100,6 +100,9 @@ $(window).ready(function(){
 	$("#esportsbutton").click(function(){
 		$('html,body').animate({ scrollTop : $("#partition4").offset().top } , 1000);
 	});
+	$("#gameengineButton").click(function(){
+		$('html,body').animate({ scrollTop : $("#partition3").offset().top } , 1000);
+	});
 /////////////////////////////////////////////////////////////////////////bina added end/////////////////////////////
 
 

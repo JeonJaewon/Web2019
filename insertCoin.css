@@ -3,6 +3,11 @@
 /*body{padding: 60px;}*/
 li{list-style: none;}
 a{text-decoration: none;}
+a:link{text-decoration: none;}
+a:visited{text-decoration: none;}	
+a:active{text-decoration: none;}
+a:hover{text-decoration: none;}
+	
 img{border:0;}
 html, body{
 	height:100%;
@@ -80,6 +85,18 @@ nav ul li a:hover {
 nav ul li a:focus {
 
 	color: rgba(255, 80, 32, 1);
+}
+#gameenginespace{
+ 	height: 120%;
+	width: 100%;
+	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(172,178,207,1) 0%, rgba(191,149,187,1) 49%, rgba(238,79,138,1) 100%);
+}
+#gameenginespace a{
+	color: white;
+	cursor: pointer
+}
+#gameenginespace a:visited{
+	color: white;
 }
 #esportsspace img{
 	height: 100%;
@@ -182,10 +199,10 @@ nav ul li a:focus {
 
 /*기사 내용 부분*/
 .article{
-	margin:5% auto;
+	margin:0 auto;
 	width:100%; 
 	height:100%;
-	border:1px solid black;
+	/*border:1px solid black;*/
 }
 
 .article_partition{
