@@ -42,7 +42,7 @@ $(window).ready(function(){
 		$('html,body').animate({ scrollTop : 0 } , 400);
 
 	});
-
+/////////////////////////////////////////////////////////////////////////bina added start /////////////////////////////
 	$("#hottest").click(function(){
 		$('html,body').animate({ scrollTop : 0 } , 400);
 	});
@@ -79,7 +79,7 @@ $(window).ready(function(){
 
 	var w = now.getDate();
 	$("#week").text(w);
-
+/////////////////////////////////////////////////////////////////////////bina added end/////////////////////////////
 
 
 	//슬라이드쇼 함수들
