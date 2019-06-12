@@ -198,36 +198,124 @@ $("div.small_article").click(function(){
  		var winWidth=$(window).width()*0.85;
 	 	var winHeight=$(window).height()*0.8;
  		var indexNum=$(this).index()+1;	
- 		// $("div.small_article").css("display","none");
- 		//  $("div.small_article:nth-child("+indexNum+")").css("display","block");
- 		// for(var i=0; i<4; i++){
- 		// 	var index=i+1;
- 			// if(i==indexNum){
 
-	switch(indexNum){
-				case 1:$("div.small_article:nth-child("+indexNum+")")
-			.animate({height:winHeight, width:winWidth},1000,"swing");
-				$(".article2").fadeOut();
-				$(".article3").fadeOut();
-				$(".article4").fadeOut();
+ 		var now_small_article=$("div.small_article:nth-of-type("+indexNum+")");
+ 		// var ind=$(this).index()+1; //몇번째 뉴스인지 찾는다
+      	var parInd=$(this).parent().index()-8; //몇번째 article_partition인지 찾는다. 왜 8빼야 되는지는 모르겠는데 아무튼됨
+ 		var now_parent=$("div.article_partition:nth-of-type("+parInd+")");
+
+	switch(parInd){
+				case 1:
+				switch(indexNum){
+					case 1:
+						$("#article1-1").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article1-2").fadeOut();
+						$("#article1-3").fadeOut();
+						$("#article1-4").fadeOut();
+					break;
+					case 2:
+						$("#article1-2").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article1-1").fadeOut();
+						$("#article1-3").fadeOut();
+						$("#article1-4").fadeOut();
+					break;
+					case 3:
+						$("#article1-3").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article1-1").fadeOut();
+						$("#article1-2").fadeOut();
+						$("#article1-4").fadeOut();
+					break;
+					case 4:
+						$("#article1-4").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article1-1").fadeOut();
+						$("#article1-3").fadeOut();
+						$("#article1-2").fadeOut();
+					break;
+				}
 			break;
-				case 2:$("div.small_article:nth-child("+indexNum+")")
-			.animate({height:winHeight, width:winWidth, left:"40px"},1000,"swing");
-				$(".article1").fadeOut();
-				$(".article3").fadeOut();
-				$(".article4").fadeOut();
+				case 2:
+					switch(indexNum){
+					case 1:
+						$("#article2-1").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article2-2").fadeOut();
+						$("#article2-3").fadeOut();
+						$("#article2-4").fadeOut();
+					break;
+					case 2:
+						$("#article2-2").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article2-1").fadeOut();
+						$("#article2-3").fadeOut();
+						$("#article2-4").fadeOut();
+					break;
+					case 3:
+						$("#article2-3").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article2-1").fadeOut();
+						$("#article2-2").fadeOut();
+						$("#article2-4").fadeOut();
+					break;
+					case 4:
+						$("#article2-4").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article2-1").fadeOut();
+						$("#article2-3").fadeOut();
+						$("#article2-2").fadeOut();
+					break;
+				}
 			break;
-				case 3:$("div.small_article:nth-child("+indexNum+")")
-			.animate({height:winHeight, width:winWidth, top:"20px"},1000,"swing");
-				$(".article1").fadeOut();
-				$(".article2").fadeOut();
-				$(".article4").fadeOut();
+				case 3:
+				switch(indexNum){
+					case 1:
+						$("#article3-1").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article3-2").fadeOut();
+						$("#article3-3").fadeOut();
+						$("#article3-4").fadeOut();
+					break;
+					case 2:
+						$("#article3-2").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article3-1").fadeOut();
+						$("#article3-3").fadeOut();
+						$("#article3-4").fadeOut();
+					break;
+					case 3:
+						$("#article3-3").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article3-1").fadeOut();
+						$("#article3-2").fadeOut();
+						$("#article3-4").fadeOut();
+					break;
+					case 4:
+						$("#article3-4").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article3-1").fadeOut();
+						$("#article3-3").fadeOut();
+						$("#article3-2").fadeOut();
+					break;
+				}
 			break;
-				case 4:$("div.small_article:nth-child("+indexNum+")")
-			.animate({height:winHeight, width:winWidth, left:"40px", top:"20px"},1000,"swing");
-				$(".article1").fadeOut();
-				$(".article2").fadeOut();
-				$(".article3").fadeOut();
+				case 4:
+				switch(indexNum){
+					case 1:
+						$("#article4-1").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article4-2").fadeOut();
+						$("#article4-3").fadeOut();
+						$("#article4-4").fadeOut();
+					break;
+					case 2:
+						$("#article4-2").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article4-1").fadeOut();
+						$("#article4-3").fadeOut();
+						$("#article4-4").fadeOut();
+					break;
+					case 3:
+						$("#article4-3").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article4-1").fadeOut();
+						$("#article4-2").fadeOut();
+						$("#article4-4").fadeOut();
+					break;
+					case 4:
+						$("#article4-4").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article4-1").fadeOut();
+						$("#article4-3").fadeOut();
+						$("#article4-2").fadeOut();
+					break;
+				}
 			break;
 		}
  				
