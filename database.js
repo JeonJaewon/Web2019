@@ -10,22 +10,34 @@
 	
    */
 
-   var DB = firebase.database();
-   //initDB();
+var DB;
 
+   $(function(){
+ 		DB = firebase.database();
+ 		DB_getLastContent();
+ 		setTimeout(initDB,1500);
+		setTimeout(showAllData,2500);
+	});
 
-   // var arrayContent=new Array();
-   // arrayContent[0]="content_0001";
 
    function initDB(){
-	 //   var DB = firebase.database();
+   		alert("init db");
+   		var cID="content_";
+		var forCount=DB_getLastContent();
 
-		// for(var i=0;i<allContent;i++){   
-		// 	DB_getLikeCount(arrayContent[i]);
-		// 	DB_getWatchCount(arrayContent[i]);
-		// }
-		// DB_getLastContent();
+		for(var i=0;i<forCount-999;i++){
+			cID+=i+1000;
+			console.log(cID);
+			DB_getLikeCount(cID);
+			DB_getWatchCount(cID);
+			cID="content_";
+			console.log(cID+"init done");
+		}
+   }
 
+   function showAllData(){
+		DB_getAllLike();
+		DB_getAllWatch();
    }
 
    function DB_setData(contentID, like,watch) {
@@ -78,12 +90,24 @@
 	function DB_getAllLike(){
 		var cID="content_";
 		var forCount=DB_getLastContent();
-		for(var i=0;i<forCount-1000;i++){
+		for(var i=0;i<forCount-999;i++){
 			cID+=i+1000;
-			console.log(DB_getLikeCount(cID));
+			console.log(cID+" like:"+DB_getLikeCount(cID));
+			cID="content_";
+		}
+	}
+	function DB_getAllWatch(){
+		var cID="content_";
+		var forCount=DB_getLastContent();
+		for(var i=0;i<forCount-999;i++){
+			cID+=i+1000;
+			console.log(cID+" watch:"+DB_getWatchCount(cID));
 			cID="content_";
 		}
 	}
 
 
-	//v_0.0.1
+
+
+
+	//v_0.0.2
