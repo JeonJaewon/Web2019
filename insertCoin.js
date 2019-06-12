@@ -149,7 +149,7 @@ $("html").click(function(e){
 			$("#article4-2").css("left","50%");
 			$("#article4-2").css("top","1%");
 			$("#article4-3").css("top","40%");
-			$("#article4-3").css("left","1%");
+			$("#article4-3").css("left","1%");	
 			$("#article4-4").css("left","50%");
 			$("#article4-4").css("top","40%");
 		}
@@ -159,9 +159,12 @@ $("html").click(function(e){
 	 //}
 });
 
-var esports_contents = $.getJSON({url:"json_content_1005.txt"});
+var esports_contents = $.ajax({url:"json_content_1005.txt",dataType : "json"});
 esports_contents.done(function(data, status){
-	$("thumbnail_4_1").append(esports_contents.title).append(esports_contents.cURL[0]);
+	$(".league_title").html(data.title); 
+	$("#team_img1").attr("src",data.cURL[0]);
+	$("#team_img2").attr("src",data.cURL[1]);
+	$(".league_desc").html(data.content[0]);
 });
 
 

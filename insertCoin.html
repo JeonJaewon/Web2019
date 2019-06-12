@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
 	<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase.js"></script>
 	<script type="text/javascript" src="database.js"></script>
 
@@ -106,6 +107,7 @@
 			<div id = "esportsbutton"> View All Contents</div>
 		</div>
 	</div>		
+
 		<!-- bina added end -->
 
 
@@ -307,7 +309,11 @@
 		<div class="article_partition" id = "partition4"><!-- 4 분할 더 보기 기능 -->
 		<div class="small_article article1" id="article4-1">
 			<div class="article_title"><span id="month"></span> <span id = "week"> </span> SCHEDULE</div>
-			<div class="article_thumbnail" id ="thumbnail_4_1 content"></div> 
+			<div class="article_thumbnail">
+				<div class="league_title"  style="font-size:25px; font-weight: bold;"></div>
+				<div class = "team_img" ><img id = "team_img1"></img><img src="vs.png"><img id= "team_img2"></img></div>
+				<div class ="league_desc" style="font-size:20px;"></div>
+			</div> 
 			<div class="article_content"> </div>
 			<div class="article_status">
 				<div class="like_counter">
@@ -352,7 +358,7 @@
 		</div>
 		<div class="small_article article4" id="article4-4">
 			<div class="article_title">CardNews 4</div>
-			<div class="article_thumbnail" id="thumbnail_4_1">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_thumbnail" >미리보기 글씨</div> <!-- 미리보기 -->
 			<div class="article_content"></div>
 			<div class="article_status">
 				<div class="like_counter">

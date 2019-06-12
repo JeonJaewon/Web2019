@@ -1,6 +1,7 @@
-*{margin:0; padding: 0;}
+*{margin:0; padding: 0; }
 /*body{font-family: }*/
 /*body{padding: 60px;}*/
+body{background-color: black;}
 li{list-style: none;}
 a{text-decoration: none;}
 a:link{text-decoration: none;}
@@ -50,7 +51,11 @@ html, body{
 
 }
 
+#thumbnail_4_1 img{
+	width: 20%;
+	height: 30%;
 
+}
 #main_title{
 position:fixed;
 left:150px;
@@ -88,6 +93,7 @@ nav ul li a:focus {
 	color: rgba(255, 80, 32, 1);
 }
 #gameenginespace{
+
  	height: 120%;
 	width: 100%;
 	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(172,178,207,1) 0%, rgba(191,149,187,1) 49%, rgba(238,79,138,1) 100%);
@@ -102,12 +108,14 @@ nav ul li a:focus {
 #esportsspace img{
 	height: 100%;
 	display: block;
+
 }
 
 #esportsspace{
 	position: relative;
 	height: 100%;
 	width: 100%;
+
 }
 
 #esportsarticle{
@@ -179,6 +187,9 @@ nav ul li a:focus {
 	height:150%;
 	width:100%;
 	position:relative;
+	margin:5%;
+
+
 }
 @-webkit-keyframes blinker {
   from {opacity: 1.0;}
@@ -327,6 +338,7 @@ nav ul li a:focus {
 	margin:5% auto;
 	padding:2% 0 0 2%;
 	position:relative;
+	font-family: 'Do Hyeon','Arial', sans-serif;
 }
 
 .small_article{
@@ -344,7 +356,7 @@ nav ul li a:focus {
 	margin: 3% 5%;
 	width:45%;
 	color: white;
-	font-size: 20px;
+	font-size: 23px;
 	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
@@ -352,6 +364,7 @@ nav ul li a:focus {
 	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,90,1) 0%, rgba(238,79,119,1) 79%, rgba(238,79,138,1) 100%);
 }
 .article_thumbnail{
+	padding-top: 5%;
 	text-align: center;
 	height: 70%;
 	width: 95%;
@@ -417,4 +430,9 @@ nav ul li a:focus {
 	top:40%;
 	/*background-color:#EDB2B8;*/
 	/*z-index:-1;*/
+}
+
+.team_img img {
+	width: 20%;
+	height: 20%;
 }
