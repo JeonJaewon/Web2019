@@ -160,6 +160,7 @@ $(window).ready(function(){
 		$("#article2-3").css("left","1%");
 		$("#article2-4").css("left","50%");
 		$("#article2-4").css("top","40%");
+
 		$("#article3-1").css("left","1%");
 		$("#article3-1").css("top","1%");
 		$("#article3-2").css("left","50%");
@@ -168,6 +169,7 @@ $(window).ready(function(){
 		$("#article3-3").css("left","1%");
 		$("#article3-4").css("left","50%");
 		$("#article3-4").css("top","40%");
+
 		$("#article4-1").css("left","1%");
 		$("#article4-1").css("top","1%");
 		$("#article4-2").css("left","50%");
@@ -182,14 +184,18 @@ $(window).ready(function(){
 
 var esports_contents = $.ajax({url:"json_content_1005.txt",dataType : "json"});
 esports_contents.done(function(data, status){
-	$("#match1.league_title").html(data.title); 
-	$("#match1.team_img1").attr("src",data.cURL[0]);
-	$("#match2.team_img2").attr("src",data.cPIC[1]);
-	$("#match2.league_desc").html(data.content[0]);
+	$("#league_title1").html(data.title); 
+	$("#team_img1").attr("src",data.cPIC[0]);
+	$("#team_img2").attr("src",data.cPIC[1]);
+	$("#league_desc1").html(data.content[0]);
+	$("#league_title2").html(data.title); 
+	$("#team_img3").attr("src",data.cPIC[2]);
+	$("#team_img4").attr("src",data.cPIC[3]);
+	$("#league_desc2").html(data.content[1]);
 });
 
 
-	$("#right_arrow").click(function(){ //슬라이드쇼 오른쪽 화살표 클릭
+		$("#right_arrow").click(function(){ //슬라이드쇼 오른쪽 화살표 클릭
 		$("img.slide").fadeOut(700);
 		setTimeout(function() {
 			if(slideIndex < mainSlides.length-1){

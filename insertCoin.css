@@ -14,7 +14,7 @@ html, body{
 	font-family: Arial,Helvetica,sans-serif;
 }
 body{
-	background-color:black;q
+	background-color:black;
 }
 /*화면 우측 하단 설정 버튼*/
 .setting_button{ 
@@ -54,7 +54,10 @@ body{
 }
 
 
-#main_title{
+.match img{
+	width: 20%;
+	height: 20%;
+
 position:fixed;
 left:150px;
 top:20px;
@@ -356,6 +359,7 @@ nav ul li a:focus {
 	background-color: white;
 	border:1px dotted black;
 	z-index: 10;
+	overflow:hidden;
 }
 .article_title{
 	margin: 3% 5%;
@@ -369,13 +373,16 @@ nav ul li a:focus {
 	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,90,1) 0%, rgba(238,79,119,1) 79%, rgba(238,79,138,1) 100%);
 }
 .article_thumbnail{
+
 	text-align: center;
 	height: 70%;
 	width: 95%;
 	margin:0 auto;
 	color: white;
 	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,138,1) 0%, rgba(238,79,119,1) 21%, rgba(238,79,90,1) 100%);
+  
 }
+
 .article_thumbnail img{
 	height: 30%;
 	widows: 30%;

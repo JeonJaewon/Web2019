@@ -1,11 +1,8 @@
 ﻿{
 "title" : "LCK 서머 정규시즌 1R",
 "cID":"article4-2",
-"cURL":["https://dthumb-phinf.pstatic.net/?src=http://imgsports.naver.net/images/emblem/new/lol/default/R457.png&type=f64_64",
-	"https://dthumb-phinf.pstatic.net/?src=http://imgsports.naver.net/images/emblem/new/lol/default/R105.png&type=f64_64",
-	"https://dthumb-phinf.pstatic.net/?src=http://imgsports.naver.net/images/emblem/new/lol/default/R479.png&type=f64_64",
-	"https://dthumb-phinf.pstatic.net/?src=http://imgsports.naver.net/images/emblem/new/lol/default/R480.png&type=f64_64"],
-"cPIC":"",
+"cURL":"",
+"cPIC":["griffin.png","geng.png","kt.png","hanhwa.png"],
 "content":["17:00 서울 LoL PARK","20:00 서울 LoL PARK"]
 
 
