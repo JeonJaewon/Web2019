@@ -89,6 +89,7 @@ html,body{
 .article_title{
 	margin: 3% 5%;
 	width:45%;
+
 	height:8%;
 	line-height: 30px;
 	background-color: rgba(236, 54, 66, 1);	
@@ -97,6 +98,7 @@ html,body{
 	height: 70%;
 	width: 95%;
 	margin:0 auto;
+
 	background-color: rgba(236, 54, 66, 1);
 }
 .article_content{
@@ -108,12 +110,22 @@ html,body{
 }
 .article_status{
 	position: absolute;
-	height: 5%;
+/*<<<<<<< HEAD
+*/	height: 5%;
 	width: 45%;
 	right: 3%;
 	bottom: 3%;
-	background-color: black;
+	background-color: ivory;
 }
+.like_counter{
+	float: right;
+	height: 100%;
+}
+.watch_counter{
+	float: left;
+	height: 100%;
+}
+
 .article1{
 	position:absolute;
 	left:1%;
@@ -123,6 +135,7 @@ html,body{
 }
 .article2{
 	position:absolute;
+
 	left:50%;
 	top:1%;
 	/*background-color:#EDB2B8;*/
@@ -137,6 +150,7 @@ html,body{
 }
 .article4{
 	position:absolute;
+
 	left:50%;
 	top:40%;
 	/*background-color:#EDB2B8;*/

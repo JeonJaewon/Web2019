@@ -97,8 +97,7 @@ $("div.small_article").click(function(){
  		// for(var i=0; i<4; i++){
  		// 	var index=i+1;
  			// if(i==indexNum){
-
- 			switch(indexNum){
+	switch(indexNum){
 				case 1:$("div.small_article:nth-child("+indexNum+")")
 			.animate({height:winHeight, width:winWidth},1000,"swing");
 				$(".article2").fadeOut();
@@ -153,7 +152,7 @@ $("html").click(function(e){
 		// 	article_expanded=false;
 		$("div.small_article").css("display","block");
 		$("div.small_article").css("width","45%");
-		$("div.small_article").css("height","400px");
+		$("div.small_article").css("height","35%");
 		$("#article1-1").css("left","1%");
 		$("#article1-2").css("top","1%");
 		$("#article1-2").css("left","50%");
