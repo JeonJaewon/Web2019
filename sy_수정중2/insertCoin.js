@@ -28,7 +28,6 @@ function onLightMode(){
 
 $(window).ready(function(){
 
-
 	var slideIndex = 0; //현재 표시되는 슬라이드의 인덱스
 	var mainSlides = document.getElementsByClassName("slide");
 	mainSlides[slideIndex].style.display="block";
@@ -43,7 +42,46 @@ $(window).ready(function(){
 
 	$("#up_arrow_button").click(function(){ //화살표 버튼 클릭시 상단 이동
 		$('html,body').animate({ scrollTop : 0 } , 400);
+
 	});
+
+	$("#hottest").click(function(){
+		$('html,body').animate({ scrollTop : 0 } , 400);
+	});
+	$("#newgame").click(function(){
+		$('html,body').animate({ scrollTop : $("#newgamespace").offset().top } , 400);
+	}); 
+	$("#gameengine").click(function(){
+		$('html,body').animate({ scrollTop : $("#gameenginespace").offset().top } , 400);
+	}); 
+	$("#live").click(function(){
+		$('html,body').animate({ scrollTop : $("#livespace").offset().top } , 400);
+	}); 
+	$("#esports").click(function(){
+		$('html,body').animate({ scrollTop : $("#esportsspace").offset().top } , 400);
+	});
+	var now = new Date();
+	var s = now.getMonth();
+	switch(s){
+		case 0:s = "January";break;
+		case 1:s = "February";break;
+		case 2:s = "March";break;
+		case 3:s = "April";break;
+		case 4:s = 'May';break;
+		case 5:s = 'June';break;
+		case 6:s = 'July';break;
+		case 7:s = 'August';break;
+		case 8:s = 'September';break;
+		case 9:s = 'October';break;
+		case 10:s = 'November';break;
+		case 11:s = 'December';break;
+	}
+
+	$("#month").text(s);
+
+	var w = now.getDate();
+	$("#week").text(w);
+
 
 
 	//슬라이드쇼 함수들
