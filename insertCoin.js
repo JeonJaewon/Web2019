@@ -159,10 +159,7 @@ $("html").click(function(e){
 	 //}
 });
 
-var esports_contents = $.getJSON({url:"json_content_1005.txt"});
-esports_contents.done(function(data, status){
-	$("thumbnail_4_1").append(esports_contents.title).append(esports_contents.cURL[0]);
-});
+
 
 
 	//슬라이드쇼 함수들
