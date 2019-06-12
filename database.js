@@ -17,6 +17,8 @@ var DB;
  		DB_getLastContent();
  		setTimeout(initDB,1500);
 		setTimeout(showAllData,3000);
+		setTimeout(get_max_function_start,3000);
+
 		//delay >3000;
 	});
 
@@ -86,16 +88,21 @@ var DB;
 			likestr.on('value',function(e){
 				OutLastContent= e.val();
 			});
-			return OutLastContent;
+			return parseInt(OutLastContent);
 	}
 	function DB_getAllLike(){
+		var likearr=new Array();
 		var cID="content_";
 		var forCount=DB_getLastContent();
 		for(var i=0;i<forCount-999;i++){
 			cID+=i+1000;
-			console.log(cID+" like:"+DB_getLikeCount(cID));
+			//console.log(cID+" like:"+DB_getLikeCount(cID));
+			likearr[i]=DB_getLikeCount(cID);
+			console.log(cID+" like:"+likearr[i]);
 			cID="content_";
 		}
+
+		return likearr;
 	}
 	function DB_getAllWatch(){
 		var cID="content_";
@@ -111,4 +118,4 @@ var DB;
 
 
 
-	//v_0.0.2
+	//v_0.0.3

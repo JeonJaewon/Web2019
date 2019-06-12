@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase.js"></script>
+	<script type="text/javascript" src="database.js"></script>
+
+
 	<link rel="stylesheet" type="text/css" href="insertCoin.css">
 	<script type="text/javascript" src="insertCoin.js"></script>
-
 	<script type="text/javascript" src="onLike.js"></script>
+	<script type="text/javascript" src="Maxfunction.js"></script>
 
 	<title>Insert Coin</title>
 </head>
@@ -327,4 +332,34 @@
 
 
 </body>
+
+
+
+<!-- ______THIS PART IS FOR DATABASE CONNECTION______ -->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB23eupCYrLa_MjURxM3U7NA7LerL3OfmE",
+    authDomain: "webtest-3663d.firebaseapp.com",
+    databaseURL: "https://webtest-3663d.firebaseio.com",
+    projectId: "webtest-3663d",
+    storageBucket: "webtest-3663d.appspot.com",
+    messagingSenderId: "635235171221",
+    appId: "1:635235171221:web:df2702c0c9d4f512"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-database.js"></script>
+
+<!-- ______THIS PART IS FOR DATABASE CONNECTION______ -->
 </html>
