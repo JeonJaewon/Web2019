@@ -107,60 +107,77 @@ $(window).ready(function(){
 	$("#newgamespace").click(function(){
 		$('html,body').animate({ scrollTop : $("#partition1").offset().top } , 1000);
 	});
-$("html").click(function(e){
+	$(".go_back_arrow").click(function(e){
+	// $("div.small_article").css("display","block");
+	// $("div.small_article").css("width","45%");
+	// $("div.small_article").css("height","35%");
 
-	 if(!$(e.target).hasClass("small_article")){
-		// if(article_expanded){
-		// 	article_expanded=false;
-		// if(article_expanded){
-		// 	article_expanded=false;
-			$("div.small_article").css("display","block");
-			$("div.small_article").css("width","45%");
-			$("div.small_article").css("height","35%");
-			$("#article1-1").css("left","1%");
-			$("#article1-1").css("top","1%");
-			$("#article1-2").css("left","50%");
-			$("#article1-2").css("top","1%");
-			$("#article1-3").css("top","40%");
-			$("#article1-3").css("left","1%");
-			$("#article1-4").css("left","50%");
-			$("#article1-4").css("top","40%");
+	// $("div.small_article").css("display","block");
+	// $("div.small_article").css("width","45%");
+	// $("div.small_article").css("height","35%");
+		e.stopPropagation()
+ 
+		$("#article1-1").fadeIn();
+		$("#article1-2").fadeIn();
+		$("#article1-3").fadeIn();
+		$("#article1-4").fadeIn();
 
-			$("#article2-1").css("left","1%");
-			$("#article2-1").css("top","1%");
-			$("#article2-2").css("left","50%");
-			$("#article2-2").css("top","1%");
-			$("#article2-3").css("top","40%");
-			$("#article2-3").css("left","1%");
-			$("#article2-4").css("left","50%");
-			$("#article2-4").css("top","40%");
+		$("#article2-1").fadeIn();
+		$("#article2-2").fadeIn();
+		$("#article2-3").fadeIn();
+		$("#article2-4").fadeIn();
 
-			$("#article3-1").css("left","1%");
-			$("#article3-1").css("top","1%");
-			$("#article3-2").css("left","50%");
-			$("#article3-2").css("top","1%");
-			$("#article3-3").css("top","40%");
-			$("#article3-3").css("left","1%");
-			$("#article3-4").css("left","50%");
-			$("#article3-4").css("top","40%");
+		$("#article3-1").fadeIn();
+		$("#article3-2").fadeIn();
+		$("#article3-3").fadeIn();
+		$("#article3-4").fadeIn();
 
-			$("#article4-1").css("left","1%");
-			$("#article4-1").css("top","1%");
-			$("#article4-2").css("left","50%");
-			$("#article4-2").css("top","1%");
-			$("#article4-3").css("top","40%");
-			$("#article4-3").css("left","1%");
-			$("#article4-4").css("left","50%");
-			$("#article4-4").css("top","40%");
-		}
-		//
-		 //}
-	
-	 //}
-});
+		$("#article4-1").fadeIn();
+		$("#article4-2").fadeIn();
+		$("#article4-3").fadeIn();
+		$("#article4-4").fadeIn();
+
+		$(this).closest(".small_article").css("display","block");
+		$(this).closest(".small_article").css("width","45%");
+		$(this).closest(".small_article").css("height","35%");
 
 
+		$("#article1-1").css("left","1%");
+		$("#article1-1").css("top","1%");
+		$("#article1-2").css("left","50%");
+		$("#article1-2").css("top","1%");
+		$("#article1-3").css("top","40%");
+		$("#article1-3").css("left","1%");
+		$("#article1-4").css("left","50%");
+		$("#article1-4").css("top","40%");
 
+		$("#article2-1").css("left","1%");
+		$("#article2-1").css("top","1%");
+		$("#article2-2").css("left","50%");
+		$("#article2-2").css("top","1%");
+		$("#article2-3").css("top","40%");
+		$("#article2-3").css("left","1%");
+		$("#article2-4").css("left","50%");
+		$("#article2-4").css("top","40%");
+
+		$("#article3-1").css("left","1%");
+		$("#article3-1").css("top","1%");
+		$("#article3-2").css("left","50%");
+		$("#article3-2").css("top","1%");
+		$("#article3-3").css("top","40%");
+		$("#article3-3").css("left","1%");
+		$("#article3-4").css("left","50%");
+		$("#article3-4").css("top","40%");
+
+		$("#article4-1").css("left","1%");
+		$("#article4-1").css("top","1%");
+		$("#article4-2").css("left","50%");
+		$("#article4-2").css("top","1%");
+		$("#article4-3").css("top","40%");
+		$("#article4-3").css("left","1%");
+		$("#article4-4").css("left","50%");
+		$("#article4-4").css("top","40%");
+	});
 
 	//슬라이드쇼 함수들
 	$("#right_arrow").click(function(){ //슬라이드쇼 오른쪽 화살표 클릭
@@ -189,13 +206,12 @@ $("html").click(function(e){
 		},700)
 	});
 
-$("div.small_article").click(function(){
-
+$("div.small_article").click(function(e){
+		e.stopPropagation()
 
  		var winWidth=$(window).width()*0.85;
 	 	var winHeight=$(window).height()*0.8;
  		var indexNum=$(this).index()+1;	
-
  		var now_small_article=$("div.small_article:nth-of-type("+indexNum+")");
  		// var ind=$(this).index()+1; //몇번째 뉴스인지 찾는다
       	var parInd=$(this).parent().index()-8; //몇번째 article_partition인지 찾는다. 왜 8빼야 되는지는 모르겠는데 아무튼됨
@@ -340,52 +356,52 @@ $(window).resize(function(){
 });
 
 
-$("html").click(function(e){
-	if(!$(e.target).hasClass("small_article")){
-		// if(article_expanded){
-		// 	article_expanded=false;
+// $("html").click(function(e){
+// 	if(!$(e.target).hasClass("small_article")){
+// 		// if(article_expanded){
+// 		// 	article_expanded=false;
 		
-		$("div.small_article").css("display","block");
-		$("div.small_article").css("width","45%");
-		$("div.small_article").css("height","35%");
-		$("#article1-1").css("left","1%");
-		$("#article1-2").css("top","1%");
-		$("#article1-2").css("left","50%");
-		$("#article1-2").css("top","1%");
-		$("#article1-3").css("top","40%");
-		$("#article1-3").css("left","1%");
-		$("#article1-4").css("left","50%");
-		$("#article1-4").css("top","40%");
+// 		$("div.small_article").css("display","block");
+// 		$("div.small_article").css("width","45%");
+// 		$("div.small_article").css("height","35%");
+// 		$("#article1-1").css("left","1%");
+// 		$("#article1-2").css("top","1%");
+// 		$("#article1-2").css("left","50%");
+// 		$("#article1-2").css("top","1%");
+// 		$("#article1-3").css("top","40%");
+// 		$("#article1-3").css("left","1%");
+// 		$("#article1-4").css("left","50%");
+// 		$("#article1-4").css("top","40%");
 
-		$("#article2-1").css("left","1%");
-		$("#article2-1").css("top","1%");
-		$("#article2-2").css("left","50%");
-		$("#article2-2").css("top","1%");
-		$("#article2-3").css("top","40%");
-		$("#article2-3").css("left","1%");
-		$("#article2-4").css("left","50%");
-		$("#article2-4").css("top","40%");
+// 		$("#article2-1").css("left","1%");
+// 		$("#article2-1").css("top","1%");
+// 		$("#article2-2").css("left","50%");
+// 		$("#article2-2").css("top","1%");
+// 		$("#article2-3").css("top","40%");
+// 		$("#article2-3").css("left","1%");
+// 		$("#article2-4").css("left","50%");
+// 		$("#article2-4").css("top","40%");
 
-		$("#article3-1").css("left","1%");
-		$("#article3-1").css("top","1%");
-		$("#article3-2").css("left","50%");
-		$("#article3-2").css("top","1%");
-		$("#article3-3").css("top","40%");
-		$("#article3-3").css("left","1%");
-		$("#article3-4").css("left","50%");
-		$("#article3-4").css("top","40%");
+// 		$("#article3-1").css("left","1%");
+// 		$("#article3-1").css("top","1%");
+// 		$("#article3-2").css("left","50%");
+// 		$("#article3-2").css("top","1%");
+// 		$("#article3-3").css("top","40%");
+// 		$("#article3-3").css("left","1%");
+// 		$("#article3-4").css("left","50%");
+// 		$("#article3-4").css("top","40%");
 
-		$("#article4-1").css("left","1%");
-		$("#article4-1").css("top","1%");
-		$("#article4-2").css("left","50%");
-		$("#article4-2").css("top","1%");
-		$("#article4-3").css("top","40%");
-		$("#article4-3").css("left","1%");
-		$("#article4-4").css("left","50%");
-		$("#article4-4").css("top","40%");
+// 		$("#article4-1").css("left","1%");
+// 		$("#article4-1").css("top","1%");
+// 		$("#article4-2").css("left","50%");
+// 		$("#article4-2").css("top","1%");
+// 		$("#article4-3").css("top","40%");
+// 		$("#article4-3").css("left","1%");
+// 		$("#article4-4").css("left","50%");
+// 		$("#article4-4").css("top","40%");
 
-		}
+// 		}
 	
-	// }
-});
+// 	// }
+// });
 
