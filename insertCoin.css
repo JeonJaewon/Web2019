@@ -12,6 +12,9 @@ img{border:0;}
 html, body{
 	height:100%;
 }
+body{
+	background-color:black;
+}
 /*화면 우측 하단 설정 버튼*/
 .setting_button{ 
 	z-index:10;
@@ -178,6 +181,7 @@ nav ul li a:focus {
 	height:150%;
 	width:100%;
 	position:relative;
+	
 }
 @-webkit-keyframes blinker {
   from {opacity: 1.0;}
@@ -326,6 +330,7 @@ nav ul li a:focus {
 	margin:5% auto;
 	padding:2% 0 0 2%;
 	position:relative;
+	background-color:black;
 }
 
 .small_article{
