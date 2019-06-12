@@ -1,8 +1,8 @@
 var NIGHT_MODE = false;
 var settings_on = false; //설정버튼 클릭했는지?
 
-function onLightMode(){
-	if(!NIGHT_MODE){
+function onLightMode()
+{	if(!NIGHT_MODE){
 		alert("black function start");
 		NIGHT_MODE=true;
 	}
