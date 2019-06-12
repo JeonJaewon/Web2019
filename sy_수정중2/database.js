@@ -1,10 +1,7 @@
    //Firebase(database) connection handle
    //Web Programming Team 2
 
-<<<<<<< HEAD
-=======
 
->>>>>>> master
    /*
 	DB_set*();   push data into database
 	DB_Get*();   get data from database
@@ -114,6 +111,4 @@ var DB;
 
 
 
-
-	//v_0.0.3
-
+	//v_0.0.2
