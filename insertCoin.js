@@ -82,6 +82,10 @@ $(window).ready(function(){
 
 	var w = now.getDate();
 	$("#week").text(w);
+
+	$("#esportsbutton").click(function(){
+		$('html,body').animate({ scrollTop : $("#partition4").offset().top } , 400);
+	});
 /////////////////////////////////////////////////////////////////////////bina added end/////////////////////////////
 
 
