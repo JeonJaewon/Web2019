@@ -107,7 +107,6 @@ $(window).ready(function(){
 	$("#newgamespace").click(function(){
 		$('html,body').animate({ scrollTop : $("#partition1").offset().top } , 1000);
 	});
-<<<<<<< HEAD
 	$(".go_back_arrow").click(function(e){
 	// $("div.small_article").css("display","block");
 	// $("div.small_article").css("width","45%");
@@ -151,57 +150,7 @@ $(window).ready(function(){
 		$("#article1-3").css("left","1%");
 		$("#article1-4").css("left","50%");
 		$("#article1-4").css("top","40%");
-=======
-$("html").click(function(e){
 
-	 if(!$(e.target).hasClass("small_article")){
-		// if(article_expanded){
-		// 	article_expanded=false;
-		// if(article_expanded){
-		// 	article_expanded=false;
-			$("div.small_article").css("display","block");
-			$("div.small_article").css("width","45%");
-			$("div.small_article").css("height","35%");
-			$("#article1-1").css("left","1%");
-			$("#article1-1").css("top","1%");
-			$("#article1-2").css("left","50%");
-			$("#article1-2").css("top","1%");
-			$("#article1-3").css("top","40%");
-			$("#article1-3").css("left","1%");
-			$("#article1-4").css("left","50%");
-			$("#article1-4").css("top","40%");
-
-			$("#article2-1").css("left","1%");
-			$("#article2-1").css("top","1%");
-			$("#article2-2").css("left","50%");
-			$("#article2-2").css("top","1%");
-			$("#article2-3").css("top","40%");
-			$("#article2-3").css("left","1%");
-			$("#article2-4").css("left","50%");
-			$("#article2-4").css("top","40%");
-
-			$("#article3-1").css("left","1%");
-			$("#article3-1").css("top","1%");
-			$("#article3-2").css("left","50%");
-			$("#article3-2").css("top","1%");
-			$("#article3-3").css("top","40%");
-			$("#article3-3").css("left","1%");
-			$("#article3-4").css("left","50%");
-			$("#article3-4").css("top","40%");
-
-			$("#article4-1").css("left","1%");
-			$("#article4-1").css("top","1%");
-			$("#article4-2").css("left","50%");
-			$("#article4-2").css("top","1%");
-			$("#article4-3").css("top","40%");
-			$("#article4-3").css("left","1%");	
-			$("#article4-4").css("left","50%");
-			$("#article4-4").css("top","40%");
-		}
-		//
-		 //}
-	
-	 //}
 });
 
 
@@ -213,37 +162,7 @@ esports_contents.done(function(data, status){
 	$("#match2.league_desc").html(data.content[0]);
 });
 
->>>>>>> 81db7c59045e098fadc32550303288b23fd93bf4
 
-		$("#article2-1").css("left","1%");
-		$("#article2-1").css("top","1%");
-		$("#article2-2").css("left","50%");
-		$("#article2-2").css("top","1%");
-		$("#article2-3").css("top","40%");
-		$("#article2-3").css("left","1%");
-		$("#article2-4").css("left","50%");
-		$("#article2-4").css("top","40%");
-
-		$("#article3-1").css("left","1%");
-		$("#article3-1").css("top","1%");
-		$("#article3-2").css("left","50%");
-		$("#article3-2").css("top","1%");
-		$("#article3-3").css("top","40%");
-		$("#article3-3").css("left","1%");
-		$("#article3-4").css("left","50%");
-		$("#article3-4").css("top","40%");
-
-		$("#article4-1").css("left","1%");
-		$("#article4-1").css("top","1%");
-		$("#article4-2").css("left","50%");
-		$("#article4-2").css("top","1%");
-		$("#article4-3").css("top","40%");
-		$("#article4-3").css("left","1%");
-		$("#article4-4").css("left","50%");
-		$("#article4-4").css("top","40%");
-	});
-
-	//슬라이드쇼 함수들
 	$("#right_arrow").click(function(){ //슬라이드쇼 오른쪽 화살표 클릭
 		$("img.slide").fadeOut(700);
 		setTimeout(function() {
