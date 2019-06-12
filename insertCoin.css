@@ -54,9 +54,9 @@ body{
 
 }
 
-#thumbnail_4_1 img{
+.match img{
 	width: 20%;
-	height: 30%;
+	height: 20%;
 
 }
 #main_title{
@@ -367,6 +367,7 @@ nav ul li a:focus {
 	background-color: white;
 	border:1px dotted black;
 	z-index: 10;
+	overflow:hidden;
 }
 .article_title{
 	margin: 3% 5%;
@@ -380,14 +381,18 @@ nav ul li a:focus {
 	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,90,1) 0%, rgba(238,79,119,1) 79%, rgba(238,79,138,1) 100%);
 }
 .article_thumbnail{
-	padding-top: 5%;
+	overflow-y: scroll;
+	padding-top:  5%;
+	padding-bottom: 5%;
 	text-align: center;
 	height: 70%;
 	width: 95%;
 	margin:0 auto;
 	color: white;
 	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,138,1) 0%, rgba(238,79,119,1) 21%, rgba(238,79,90,1) 100%);
+  
 }
+
 .article_thumbnail img{
 	height: 30%;
 	widows: 30%;
