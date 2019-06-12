@@ -141,7 +141,6 @@ $(window).ready(function(){
 		$(this).closest(".small_article").css("width","45%");
 		$(this).closest(".small_article").css("height","35%");
 
-
 		$("#article1-1").css("left","1%");
 		$("#article1-1").css("top","1%");
 		$("#article1-2").css("left","50%");
