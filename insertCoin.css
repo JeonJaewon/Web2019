@@ -13,7 +13,12 @@ img{border:0;}
 	height: 50px;
 	right: 0;
 }
-
+#up_arrow_button{
+	display: none;
+}	
+#night_mode_button{
+	display: none;
+}
 /*상단 헤더 메뉴*/
 #main_header{ 
 	z-index: 100; /*가장 상단 노출*/
@@ -89,14 +94,14 @@ img{border:0;}
 	line-height: 30px;
 	/*background-color: rgba(236, 54, 66, 1);	*/
 	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,90,1) 0%, rgba(238,79,119,1) 79%, rgba(238,79,138,1) 100%);
-
-
+	color: white;
 }
 .article_thumbnail{
 	height: 70%;
 	width: 95%;
 	margin:0 auto;
 	/*background-color: rgba(236, 54, 66, 1);*/
+	color: white;
 	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,138,1) 0%, rgba(238,79,119,1) 21%, rgba(238,79,90,1) 100%);
 }
 .article_content{
@@ -104,21 +109,25 @@ img{border:0;}
 	height: 70%;
 	width: 95%;
 	margin:0 auto;
+	color: white;
 	border:2px solid rgba(236, 54, 66, 1);
 }
 .article_status{
 	position: absolute;
-	height: 20px;
+	overflow: hidden;
+	height: 6%;
 	width: 20%;
 	right: 3%;
 	bottom: 3%;
-	background-color: ivory;
+	background-color: #fff3e6;
 }
-.like_counter{
+.like_counter{	
+	margin-right: 15%;
 	float: right;
 	height: 100%;
 }
 .watch_counter{
+	margin-left: 5%;
 	float: left;
 	height: 100%;
 }

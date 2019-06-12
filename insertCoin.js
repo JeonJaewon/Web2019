@@ -1,5 +1,5 @@
-var NIGHT_MODE =false;
-
+var NIGHT_MODE = false;
+var settings_on = false; //설정버튼 클릭했는지?
 
 function onLightMode(){
 	if(!NIGHT_MODE){
@@ -34,9 +34,21 @@ $(window).ready(function(){
 	mainSlides[slideIndex].style.display="block";
 
 
-	$("#up_arrow_button").css("top", $(window).height() - 100 + "px")
-	$("#night_mode_button").css("top", $(window).height() - 170 + "px")
+	$("#settings_button").css("top", $(window).height() - 100 + "px")
+	$("#up_arrow_button").css("top", $(window).height() - 170 + "px")
+	$("#night_mode_button").css("top", $(window).height() - 240 + "px")
 
+	$("#settings_button").click(function(){
+		if(!settings_on){
+			settings_on = true;
+			$("#up_arrow_button").slideDown();
+			$("#night_mode_button").slideDown();
+		}else{
+			settings_on = false;
+			$("#up_arrow_button").slideUp();
+			$("#night_mode_button").slideUp();
+		}
+	})
 	$("#night_mode_button").click(function(){
 		onLightMode();
 	});
@@ -117,15 +129,17 @@ $("div.small_article").click(function(){
 
 $(window).scroll(function(){  
 	var position = $(window).scrollTop()+$(window).height();
-	$("#up_arrow_button").stop().animate({ top : position - 100 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
-	$("#night_mode_button").stop().animate({ top : position - 170 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
+	$("#settings_button").stop().animate({ top : position - 100 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
+	$("#up_arrow_button").stop().animate({ top : position - 170 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
+	$("#night_mode_button").stop().animate({ top : position - 240 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
 
 });	
 
 $(window).resize(function(){
 	var position = $(window).scrollTop()+$(window).height();
-	$("#up_arrow_button").stop().animate({ top : position - 100 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
-	$("#night_mode_button").stop().animate({ top : position - 170 + "px" } , 700); 
+	$("#settings_button").css("top", $(window).height() - 100 + "px")
+	$("#up_arrow_button").stop().animate({ top : position - 170 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
+	$("#night_mode_button").stop().animate({ top : position - 240 + "px" } , 700); 
 })
 
 
