@@ -4,10 +4,12 @@
 li{list-style: none;}
 a{text-decoration: none;}
 img{border:0;}
-
+html, body{
+	height:100%;
+}
 /*화면 우측 하단 설정 버튼*/
 .setting_button{ 
-	z-index:99;
+	z-index:10;
 	position: absolute;
 	width: 50px;
 	height: 50px;
@@ -25,82 +27,196 @@ img{border:0;}
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 80px;
+	height: 70px;
 	width: 100%;
 	background-color: black;
+	font-family: Arial,Helvetica,sans-serif;
+	color: white;
 }
+
+/* bina added  start */
+#main_header img {
+
+	height: 75px;
+	width: 65px;
+	margin-left: 70px;
+	margin-top: 5px;
+
+}
+
+
+#main_title{
+position:fixed;
+left:150px;
+top:20px;
+font-size: 25px;
+font-weight:  bold;
+}
+nav{
+	position: fixed;
+	top:25px;
+	font-size: 15px;
+	right:150px;
+	font-family: avenir-lt-w01_35-light1475496, sans-serif;
+	letter-spacing:1px;
+
+}
+nav ul li {
+	float:left;
+	margin-left: 60px;
+}
+nav ul li a {
+	color:white;
+}
+nav ul li a:hover {
+
+	color: rgba(255, 80, 32, 1);
+	-webkit-transition: color 0.5s;
+    -moz-transition:    color 0.5s;
+    -ms-transition:     color 0.5s;
+    -o-transition:      color 0.5s;
+    transition:         color 0.5s;
+}
+nav ul li a:focus {
+
+	color: rgba(255, 80, 32, 1);
+}
+#esportsspace img{
+	height: 100%;
+	display: block;
+}
+
+#esportsspace{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+#esportsarticle{
+	width: 45%;
+	height: 100%;
+	background-color: white;
+	font-family: Arial,Helvetica,sans-serif;
+	position: absolute;
+	top:0;
+	right: 0;
+	text-align: center;
+}
+
+#checkout{
+	font-size: 25px;
+	font-family: avenir-lt-w01_35-light1475496, sans-serif;
+	color:darkgray;
+	margin-top: 20%;
+	margin-bottom: 8%;
+}
+#article_title{
+	font-size: 40px;
+	font-weight: bold;
+	color:black;
+	margin-bottom: 5%;
+}
+#article_title span{
+	color: #990099;
+}
+#article_text{
+	color: darkgray;
+	font-size:20px;
+	margin-bottom: 10%;
+}
+.article_menu{
+	color : black;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	width: 40%;
+	margin-bottom:3%; 
+	background-color: #f6f6f6;
+}
+#esportsbutton{
+	margin-left:auto;
+	margin-right: auto;
+	color :white;
+	width:40%;
+	padding :10px;
+	background-color: #990099;
+}
+/* bina added end */
+
 
 /*슬라이드쇼 관련*/
 #slide_show{
 	position: relative;
 	overflow: hidden;
 	width:100%; 
-	height:300px;
+	height:40%;
 	border:1px solid black;
 	margin: 0 auto;
 	margin-top: 10%;
 }
 .slide{
+	
 	display: none;
 	width:100%; 
-	height:300px;
+	height:100%;
 }
 #left_arrow{
 	position: absolute;
 	top: 40%;
-	width: 50px;
-	height: 50px;
+	width: 5%;
+	height: 20%;
 	opacity: 0.2;
 }
 #right_arrow{
 	position: absolute;
 	top: 40%;
 	right: 0%;	
-	width: 50px;
-	height: 50px;
+	width: 5%;
+	height: 20%;
 	opacity: 0.2;
 }
 
 /*기사 내용 부분*/
 .article{
-	margin:50px auto;
+	margin:5% auto;
 	width:100%; 
-	height:700px;
+	height:100%;
 	border:1px solid black;
 }
 
 .article_partition{
 	width:90%;
-	margin:60px auto;
-	padding:100px 0 0 40px;
+	height:130%;
+	margin:5% auto;
+	padding:2% 0 0 2%;
 	position:relative;
 }
 
 .small_article{
 	position:relative;
-	margin:5px 5px;
+	margin:3% 3%;
 	float:left;
 	width:45%; 
-	height:400px;
+	height:35%;
 	text-align:center;
 	background-color: white;
-	/*border:1px dotted black;*/
+	border:1px dotted black;
 	z-index: 10;
 }
 .article_title{
 	margin: 3% 5%;
 	width:45%;
-	height:30px;
-	line-height: 30px;
-	/*background-color: rgba(236, 54, 66, 1);	*/
-	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,90,1) 0%, rgba(238,79,119,1) 79%, rgba(238,79,138,1) 100%);
 	color: white;
+
+	height:8%;
+	line-height: 30px;
+	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,90,1) 0%, rgba(238,79,119,1) 79%, rgba(238,79,138,1) 100%);
 }
 .article_thumbnail{
 	height: 70%;
 	width: 95%;
 	margin:0 auto;
-	/*background-color: rgba(236, 54, 66, 1);*/
 	color: white;
 	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,138,1) 0%, rgba(238,79,119,1) 21%, rgba(238,79,90,1) 100%);
 }
@@ -131,30 +247,34 @@ img{border:0;}
 	float: left;
 	height: 100%;
 }
-#article1{
+
+.article1{
 	position:absolute;
-	left:40px;
-	top:20px;
+	left:1%;
+	top:1%;
 	/*background-color:#EDB2B8;*/
 	/*z-index:-1;*/
 }
-#article2{
+.article2{
 	position:absolute;
-	left:55%;
-	top:20px;
+
+	left:50%;
+	top:1%;
 	/*background-color:#EDB2B8;*/
 	/*z-index:-1;*/
 }
-#article3{
+.article3{
 	position:absolute;
-	top:500px;
+	left:1%;
+	top:40%;
 	/*background-color:#EDB2B8;*/
 	/*z-index:-1;*/
 }
-#article4{
+.article4{
 	position:absolute;
-	left:55%;
-	top:500px;
+
+	left:50%;
+	top:40%;
 	/*background-color:#EDB2B8;*/
 	/*z-index:-1;*/
 }

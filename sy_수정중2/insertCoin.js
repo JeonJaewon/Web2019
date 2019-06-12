@@ -1,6 +1,4 @@
-var NIGHT_MODE = false;
-var settings_on = false; //설정버튼 클릭했는지?
-
+var NIGHT_MODE =false;
 
 function onLightMode(){
 	if(!NIGHT_MODE){
@@ -30,36 +28,23 @@ function onLightMode(){
 
 $(window).ready(function(){
 
-
 	var slideIndex = 0; //현재 표시되는 슬라이드의 인덱스
 	var mainSlides = document.getElementsByClassName("slide");
 	mainSlides[slideIndex].style.display="block";
 
 
-	$("#settings_button").css("top", $(window).height() - 100 + "px")
-	$("#up_arrow_button").css("top", $(window).height() - 170 + "px")
-	$("#night_mode_button").css("top", $(window).height() - 240 + "px")
+	$("#up_arrow_button").css("top", $(window).height() - 100 + "px")
+	$("#night_mode_button").css("top", $(window).height() - 170 + "px")
 
-	$("#settings_button").click(function(){
-		if(!settings_on){
-			settings_on = true;
-			$("#up_arrow_button").slideDown();
-			$("#night_mode_button").slideDown();
-		}else{
-			settings_on = false;
-			$("#up_arrow_button").slideUp();
-			$("#night_mode_button").slideUp();
-		}
-	})
 	$("#night_mode_button").click(function(){
 		onLightMode();
 	});
 
 	$("#up_arrow_button").click(function(){ //화살표 버튼 클릭시 상단 이동
 		$('html,body').animate({ scrollTop : 0 } , 400);
+
 	});
 
-/////////////////////////////////////////////////////////////////////////bina added start /////////////////////////////
 	$("#hottest").click(function(){
 		$('html,body').animate({ scrollTop : 0 } , 400);
 	});
@@ -96,7 +81,6 @@ $(window).ready(function(){
 
 	var w = now.getDate();
 	$("#week").text(w);
-/////////////////////////////////////////////////////////////////////////bina added end/////////////////////////////
 
 
 
@@ -188,17 +172,15 @@ $("div.small_article").click(function(){
 
 $(window).scroll(function(){  
 	var position = $(window).scrollTop()+$(window).height();
-	$("#settings_button").stop().animate({ top : position - 100 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
-	$("#up_arrow_button").stop().animate({ top : position - 170 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
-	$("#night_mode_button").stop().animate({ top : position - 240 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
+	$("#up_arrow_button").stop().animate({ top : position - 100 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
+	$("#night_mode_button").stop().animate({ top : position - 170 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
 
 });	
 
 $(window).resize(function(){
 	var position = $(window).scrollTop()+$(window).height();
-	$("#settings_button").css("top", $(window).height() - 100 + "px")
-	$("#up_arrow_button").stop().animate({ top : position - 170 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
-	$("#night_mode_button").stop().animate({ top : position - 240 + "px" } , 700); 
+	$("#up_arrow_button").stop().animate({ top : position - 100 + "px" } , 700); //position뒤에 빼주는 값으로 위치 지정, 두번째 인자로 따라오는 속도 조절
+	$("#night_mode_button").stop().animate({ top : position - 170 + "px" } , 700); 
 })
 
 
