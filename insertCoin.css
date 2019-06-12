@@ -196,32 +196,75 @@ nav ul li a:focus {
 	height:400px;
 	border:1px solid black;
 	text-align:center;
+
+	background-color: white;
+	border:1px dotted black;
+	z-index: 10;
+}
+.article_title{
+	margin: 3% 5%;
+	width:45%;
+
+	height:8%;
+	line-height: 30px;
+	background-color: rgba(236, 54, 66, 1);	
+}
+.article_thumbnail{
+	height: 70%;
+	width: 95%;
+	margin:0 auto;
+
+	background-color: rgba(236, 54, 66, 1);
+}
+.article_content{
+	display: none;
+	height: 70%;
+	width: 95%;
+	margin:0 auto;
+	border:2px solid rgba(236, 54, 66, 1);
+}
+.article_status{
+	position: absolute;
+/*<<<<<<< HEAD
+*/	height: 5%;
+	width: 45%;
+	right: 3%;
+	bottom: 3%;
+	background-color: ivory;
+}
+.like_counter{
+	float: right;
+	height: 100%;
+}
+.watch_counter{
+	float: left;
+	height: 100%;
 }
 
-#article1{
+.article1{
 	position:absolute;
-	left:40px;
-	top:20px;
+	left:1%;
+	top:1%;
 	background-color:#EDB2B8;
-	z-index:-1;
 }
-#article2{
+.article2{
 	position:absolute;
-	left:55%;
-	top:20px;
+
+	left:50%;
+	top:1%;
 	background-color:#EDB2B8;
-	z-index:-1;
+	/*z-index:-1;*/
 }
-#article3{
+.article3{
 	position:absolute;
 	top:500px;
 	background-color:#EDB2B8;
 	z-index:-1;
 }
-#article4{
+.article4{
 	position:absolute;
-	left:55%;
-	top:500px;
+	left:50%;
+	top:40%;
 	background-color:#EDB2B8;
-	z-index:-1;
+	/*z-index:-1;*/
 }

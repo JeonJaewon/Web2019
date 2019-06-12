@@ -1,4 +1,5 @@
 var NIGHT_MODE =false;
+
 function onLightMode(){
 	if(!NIGHT_MODE){
 		alert("black function start");
@@ -26,6 +27,8 @@ function onLightMode(){
 }
 
 $(window).ready(function(){
+
+
 	var slideIndex = 0; //현재 표시되는 슬라이드의 인덱스
 	var mainSlides = document.getElementsByClassName("slide");
 	mainSlides[slideIndex].style.display="block";
@@ -40,8 +43,8 @@ $(window).ready(function(){
 
 	$("#up_arrow_button").click(function(){ //화살표 버튼 클릭시 상단 이동
 		$('html,body').animate({ scrollTop : 0 } , 400);
-
 	});
+
 /////////////////////////////////////////////////////////////////////////bina added start /////////////////////////////
 	$("#hottest").click(function(){
 		$('html,body').animate({ scrollTop : 0 } , 400);
@@ -82,6 +85,7 @@ $(window).ready(function(){
 /////////////////////////////////////////////////////////////////////////bina added end/////////////////////////////
 
 
+
 	//슬라이드쇼 함수들
 	$("#right_arrow").click(function(){ //슬라이드쇼 오른쪽 화살표 클릭
 		$("img.slide").fadeOut(700)
@@ -110,34 +114,62 @@ $(window).ready(function(){
 	})
 
 $("div.small_article").click(function(){
+
+	$("div.article").click(function(){
+		var articleIndex=$(this).index()+1;
+		switch(articleIndex){
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+			
+		}
+	})
+
+
+
+
  		var winWidth=$(window).width()*0.85;
 	 	var winHeight=$(window).height()*0.8;
- 		var indexNum=$(this).index();
- 		for(var i=0; i<4; i++){
- 			var index=i+1;
- 			if(i==indexNum){
- 				switch(index){
-	 					case 1:$("div.small_article:nth-child("+index+")")
-	 				.animate({height:winHeight, width:winWidth},1000,"swing");
-	 				break;
-	 					case 2:$("div.small_article:nth-child("+index+")")
-	 				.animate({height:winHeight, width:winWidth, left:"40px"},1000,"swing");
-	 				break;
-	 					case 3:$("div.small_article:nth-child("+index+")")
-	 				.animate({height:winHeight, width:winWidth, top:"20px"},1000,"swing");
-	 				break;
-	 					case 4:$("div.small_article:nth-child("+index+")")
-	 				.animate({height:winHeight, width:winWidth, left:"40px", top:"20px"},1000,"swing");
-	 				break;
-	 				}
- 				}
- 			else{
- 				$("div.small_article:nth-child("+index+")").css("display","none");
- 			}
- 		}
+ 		var indexNum=$(this).index()+1;	
+ 		// $("div.small_article").css("display","none");
+ 		//  $("div.small_article:nth-child("+indexNum+")").css("display","block");
+ 		// for(var i=0; i<4; i++){
+ 		// 	var index=i+1;
+ 			// if(i==indexNum){
+	switch(indexNum){
+				case 1:$("div.small_article:nth-child("+indexNum+")")
+			.animate({height:winHeight, width:winWidth},1000,"swing");
+				$(".article2").fadeOut();
+				$(".article3").fadeOut();
+				$(".article4").fadeOut();
+			break;
+				case 2:$("div.small_article:nth-child("+indexNum+")")
+			.animate({height:winHeight, width:winWidth, left:"40px"},1000,"swing");
+				$(".article1").fadeOut();
+				$(".article3").fadeOut();
+				$(".article4").fadeOut();
+			break;
+				case 3:$("div.small_article:nth-child("+indexNum+")")
+			.animate({height:winHeight, width:winWidth, top:"20px"},1000,"swing");
+				$(".article1").fadeOut();
+				$(".article2").fadeOut();
+				$(".article4").fadeOut();
+			break;
+				case 4:$("div.small_article:nth-child("+indexNum+")")
+			.animate({height:winHeight, width:winWidth, left:"40px", top:"20px"},1000,"swing");
+				$(".article1").fadeOut();
+				$(".article2").fadeOut();
+				$(".article3").fadeOut();
+			break;
+		}
+ 				
+		
+			// }else{
+ 		// 		$("div.small_article:nth-child("+index+")").css("display","none");
+ 		// 	}
+ 		// }
  	});
-
-
 });
 
 $(window).scroll(function(){  
@@ -156,16 +188,47 @@ $(window).resize(function(){
 
 $("html").click(function(e){
 	if(!$(e.target).hasClass("small_article")){
+		// if(article_expanded){
+		// 	article_expanded=false;
 		$("div.small_article").css("display","block");
 		$("div.small_article").css("width","45%");
-		$("div.small_article").css("height","400px");
-		$("#article1").css("left","40px");
-		$("#article1").css("top","20px");
-		$("#article2").css("left","55%");
-		$("#article2").css("top","20px");
-		$("#article3").css("top","500px");
-		$("#article3").css("left","40px");
-		$("#article4").css("left","55%");
-		$("#article4").css("top","500px");
-	}
+		$("div.small_article").css("height","35%");
+		$("#article1-1").css("left","1%");
+		$("#article1-2").css("top","1%");
+		$("#article1-2").css("left","50%");
+		$("#article1-2").css("top","1%");
+		$("#article1-3").css("top","40%");
+		$("#article1-3").css("left","1%");
+		$("#article1-4").css("left","50%");
+		$("#article1-4").css("top","40%");
+
+		$("#article2-1").css("left","1%");
+		$("#article2-1").css("top","1%");
+		$("#article2-2").css("left","50%");
+		$("#article2-2").css("top","1%");
+		$("#article2-3").css("top","40%");
+		$("#article2-3").css("left","1%");
+		$("#article2-4").css("left","50%");
+		$("#article2-4").css("top","40%");
+
+		$("#article3-1").css("left","1%");
+		$("#article3-1").css("top","1%");
+		$("#article3-2").css("left","50%");
+		$("#article3-2").css("top","1%");
+		$("#article3-3").css("top","40%");
+		$("#article3-3").css("left","1%");
+		$("#article3-4").css("left","50%");
+		$("#article3-4").css("top","40%");
+
+		$("#article4-1").css("left","1%");
+		$("#article4-1").css("top","1%");
+		$("#article4-2").css("left","50%");
+		$("#article4-2").css("top","1%");
+		$("#article4-3").css("top","40%");
+		$("#article4-3").css("left","1%");
+		$("#article4-4").css("left","50%");
+		$("#article4-4").css("top","40%");
+		}
+	
+	// }
 });
