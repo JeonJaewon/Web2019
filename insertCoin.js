@@ -118,7 +118,7 @@ $("html").click(function(e){
 			$("div.small_article").css("width","45%");
 			$("div.small_article").css("height","35%");
 			$("#article1-1").css("left","1%");
-			$("#article1-2").css("top","1%");
+			$("#article1-1").css("top","1%");
 			$("#article1-2").css("left","50%");
 			$("#article1-2").css("top","1%");
 			$("#article1-3").css("top","40%");
