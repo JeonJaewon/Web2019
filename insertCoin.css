@@ -7,7 +7,7 @@ img{border:0;}
 
 /*화면 우측 하단 설정 버튼*/
 .setting_button{ 
-	z-index:10;
+	z-index:99;
 	position: absolute;
 	width: 50px;
 	height: 50px;
