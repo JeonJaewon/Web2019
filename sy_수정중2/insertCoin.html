@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase.js"></script>
+	<script type="text/javascript" src="database.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="insertCoin.css">
+	<script type="text/javascript" src="insertCoin.js"></script>
+	<script type="text/javascript" src="onLike.js"></script>
+
+	<title>Insert Coin</title>
+</head>
+<body>
+	<div id="main_header"></div>
+
+
+	<div class="setting_button" id="up_arrow_button">
+		<img src="up_arrow.png" style="max-width: 100%; max-height: 100%"/>
+	</div>
+	<div class="setting_button" id="night_mode_button">
+		<img src="night_mode.png" style="max-width: 100%; max-height: 100%"/>
+	</div> 
+		
+	<div id="slide_show">
+		<img class="slide" id="slide1" style="background-color: yellow">
+		<img class="slide" id="slide2" style="background-color: red">
+		<img class="slide" id="slide3" style="background-color: green">
+		<div id="left_arrow">
+			<img src="left_arrow.png" style="max-width: 100%; max-height: 100%"/>
+		</div>
+		<div id="right_arrow">
+			<img src="right_arrow.png" style="max-width: 100%; max-height: 100%"/>
+		</div>
+	</div>
+
+	<div class="article"></div>
+	<div class="article"></div>
+	<div class="article">
+		<img src="live.jpg" style="max-width: 100%; max-height: 100%"/>
+	</div>
+	<div class="article"></div>
+
+		<div class="article_partition"><!-- 4 분할 더 보기 기능 -->
+		<div class="small_article article1" id="article1-1">
+			<div class="article_title">CardNews 1</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+		<div class="small_article article2" id="article1-2">
+			<div class="article_title">CardNews 2</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+		<div class="small_article article3" id="article1-3">
+			<div class="article_title">CardNews 3</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+		<div class="small_article article4" id="article1-4">
+			<div class="article_title">CardNews 4</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+		<div class="article_partition"><!-- 4 분할 더 보기 기능 -->
+		<div class="small_article article1" id="article2-1">
+			<div class="article_title">CardNews 1</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+		<div class="small_article article2" id="article2-2">
+			<div class="article_title">CardNews 2</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+		<div class="small_article article3" id="article2-3">
+			<div class="article_title">CardNews 3</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+		<div class="small_article article4" id="article2-4">
+			<div class="article_title">CardNews 4</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="article_partition"><!-- 4 분할 더 보기 기능 -->
+		<div class="small_article article1" id="article3-1">
+			<div class="article_title">CardNews 1</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+		<div class="small_article article2" id="article3-2">
+			<div class="article_title">CardNews 2</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+		<div class="small_article article3" id="article3-3">
+			<div class="article_title">CardNews 3</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+		<div class="small_article article4" id="article3-4">
+			<div class="article_title">CardNews 4</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+	</div> 
+		<div class="article_partition"><!-- 4 분할 더 보기 기능 -->
+		<div class="small_article article1" id="article4-1">
+			<div class="article_title">CardNews 1</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+		<div class="small_article article2" id="article4-2">
+			<div class="article_title">CardNews 2</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+		<div class="small_article article3" id="article4-3">
+			<div class="article_title">CardNews 3</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+		<div class="small_article article4" id="article4-4">
+			<div class="article_title">CardNews 4</div>
+			<div class="article_thumbnail">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="like1"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span id="watch1"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+<!-- ______THIS PART IS FOR DATABASE CONNECTION______ -->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB23eupCYrLa_MjURxM3U7NA7LerL3OfmE",
+    authDomain: "webtest-3663d.firebaseapp.com",
+    databaseURL: "https://webtest-3663d.firebaseio.com",
+    projectId: "webtest-3663d",
+    storageBucket: "webtest-3663d.appspot.com",
+    messagingSenderId: "635235171221",
+    appId: "1:635235171221:web:df2702c0c9d4f512"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-database.js"></script>
+
+<!-- ______THIS PART IS FOR DATABASE CONNECTION______ -->
+</html>
