@@ -30,6 +30,13 @@ body{
 #night_mode_button{
 	display: none;
 }
+#main_title{
+	position:fixed;
+	left:150px;
+	top:20px;
+	font-size: 25px;
+	font-weight:  bold;
+}
 /*상단 헤더 메뉴*/
 #main_header{ 
 	z-index: 100; /*가장 상단 노출*/
@@ -58,7 +65,7 @@ body{
 	width: 20%;
 	height: 20%;
 
-position:fixed;
+/*position:fixed;*/
 left:150px;
 top:20px;
 font-size: 25px;
@@ -178,6 +185,9 @@ nav ul li a:focus {
 	background-color: #990099;
 }
 #esportsbutton:hover{
+	cursor: pointer;
+}
+.live_article_menu2:hover{
 	cursor: pointer;
 }
 /* bina added end */
@@ -374,13 +384,16 @@ nav ul li a:focus {
 }
 .article_thumbnail{
 
+	overflow-y: scroll;
+	padding-top:  5%;
+	padding-bottom: 5%;
 	text-align: center;
 	height: 70%;
 	width: 95%;
 	margin:0 auto;
 	color: white;
 	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,138,1) 0%, rgba(238,79,119,1) 21%, rgba(238,79,90,1) 100%);
-  
+  	/*position:relative;*/
 }
 
 .article_thumbnail img{
