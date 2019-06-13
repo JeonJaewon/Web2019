@@ -3,20 +3,20 @@ var cSwitch1002=false;
 var cSwitch1003=false;
 var cSwitch1004=false;
 
-var cSwitch2001=false;
-var cSwitch2002=false;
-var cSwitch2003=false;
-var cSwitch2004=false;
+var cSwitch1005=false;
+var cSwitch1006=false;
+var cSwitch1007=false;
+var cSwitch1008=false;
 
-var cSwitch3001=false;
-var cSwitch3002=false;
-var cSwitch3003=false;
-var cSwitch3004=false;
+var cSwitch1009=false;
+var cSwitch1010=false;
+var cSwitch1011=false;
+var cSwitch1012=false;
 
-var cSwitch4001=false;
-var cSwitch4002=false;
-var cSwitch4003=false;
-var cSwitch4004=false;
+var cSwitch1013=false;
+var cSwitch1014=false;
+var cSwitch1015=false;
+var cSwitch1016=false;
 
 $(function(){
 
@@ -34,21 +34,25 @@ $(function(){
 
 		$(this).text(temp_like);
 	});
+		
+	$("div.small_article").click(function(e){ //watch,like수 찾아오는 함수
+		e.stopPropagation()
 
-	$(".small_article").click(function(){ //watch,like수 찾아오는 함수
 		var ind=$(this).index()+1; //몇번째 뉴스인지 찾는다
 		var parInd=($(this).parent().index()-9)*4; //몇번째 article_partition인지 찾는다. 왜 9빼야 되는지는 모르겠는데 아무튼됨
 		var temp_cID="content_100"+(ind+parInd);
-
 		var temp_like=DB_getLikeCount(temp_cID);
 		var temp_watch=DB_getWatchCount(temp_cID);
 
-		var switch_str="cSwitch"+(ind+parInd);
+		var switch_str="cSwitch100"+(ind+parInd);
+
 		if(window[switch_str]==false){ 
+			console.log("if문 진입");
 			window[switch_str]=true;
 			temp_watch++;
 			DB_setWatchCount(temp_cID,temp_watch);
 		}
+
 		$(this).find(".like").text(temp_like);
 		$(this).find(".watch").text(temp_watch);
 	});
