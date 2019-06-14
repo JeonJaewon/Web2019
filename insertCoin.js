@@ -30,6 +30,14 @@ function onLightMode(){
 
 $(window).ready(function(){
 
+	// loading flash
+	// $("#main_body").css({"display":"none"});
+	// setTimeout(function(){
+	// 	$("#loading_body").fadeOut(700);
+	// 	$("#main_body").fadeIn(700);
+	// },5000);
+
+
 
 	var slideIndex = 0; //현재 표시되는 슬라이드의 인덱스
 	var mainSlides = document.getElementsByClassName("slide");

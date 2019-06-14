@@ -646,3 +646,18 @@ button:hover {
 	color: white;
 
 }
+
+#loading_body{
+	height:100%;
+	width:100%;
+	text-align: center;
+
+}
+#loading{
+	margin-top: 8%;
+	-webkit-animation-name: blinker;
+   -webkit-animation-duration: 0.8s;
+   -webkit-animation-iteration-count:infinite;
+   -webkit-animation-timing-function:ease-in-out;
+   -webkit-animation-direction: alternate;
+}
