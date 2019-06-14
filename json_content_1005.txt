@@ -1,9 +1,9 @@
 ﻿{
-"title" : "LCK 서머 정규시즌 1R",
-"cID":"article4-2",
+"title" : "E-SPORTS",
+"cID":"partition4",
 "cURL":"",
-"cPIC":["griffin.png","geng.png","kt.png","hanhwa.png"],
-"content":["17:00 서울 LoL PARK","20:00 서울 LoL PARK"]
-
-
+"cPIC":"",
+"content":"E-sports  is a form of competition using video games.<br>
+ Most commonly, esports takes the form of organized, multiplayer video game competitions, particularly between professional players, individually or as teams. <br>
+Although organized online and offline competitions have long been a part of video game culture, <br>these were largely between amateurs until the late 2000s, when participation by professional gamers and spectatorship in these events through live streaming saw a large surge in popularity.<br> By the 2010s, esports was a significant factor in the video game industry, <br>with many game developers actively designing toward a professional esports subculture."
 }
