@@ -172,30 +172,15 @@ $(window).ready(function(){
 		$("#article3-4").css("left","50%");
 		$("#article3-4").css("top","40%");
 
-		$("#article4-1").css("left","1%");
-		$("#article4-1").css("top","1%");
-		$("#article4-2").css("left","50%");
-		$("#article4-2").css("top","1%");
-		$("#article4-3").css("top","40%");
-		$("#article4-3").css("left","1%");
-		$("#article4-4").css("left","50%");
-		$("#article4-4").css("top","40%");
+
 
 });
 
-
-var esports_contents = $.ajax({url:"json_content_1005.txt",dataType : "json"});
-esports_contents.done(function(data, status){
-	$("#league_title1").html(data.title); 
-	$("#team_img1").attr("src",data.cPIC[0]);
-	$("#team_img2").attr("src",data.cPIC[1]);
-	$("#league_desc1").html(data.content[0]);
-	$("#league_title2").html(data.title); 
-	$("#team_img3").attr("src",data.cPIC[2]);
-	$("#team_img4").attr("src",data.cPIC[3]);
-	$("#league_desc2").html(data.content[1]);
-});
-
+		$(".btn-1").on("click",{url:"https://www.leagueoflegends.co.kr/?m=esports&mod=chams_schedule&cate=1", winattributes : "resize=1"}, maxopen);
+		$(".btn-2").on("click",{url:"https://wcs.starcraft2.com/ko-kr/schedule/", winattributes : "resize=1"}, maxopen);
+		$(".btn-3").on("click",{url:"https://overwatchleague.com/ko-kr/schedule", winattributes : "resize=1"}, maxopen);
+		$(".btn-4").on("click",{url:"http://www.dailyesports.com/", winattributes : "resize=1"}, maxopen);
+		$(".btn-5").on("click",{url:"http://www.inven.co.kr/webzine/", winattributes : "resize=1"}, maxopen);
 
 		$("#right_arrow").click(function(){ //슬라이드쇼 오른쪽 화살표 클릭
 		$("img.slide").fadeOut(700);
@@ -421,4 +406,10 @@ $(window).resize(function(){
 	
 // 	// }
 // });
+
+	function maxopen(event){
+		var maxwindow = window.open(event.data.url, " ", event.data.winattributes);
+		maxwindow.moveTo(0,0);
+		maxwindow.resizeTo(screen.availWidth, screen.availHeight);
+	}
 
