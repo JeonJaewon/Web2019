@@ -34,6 +34,39 @@ $(function(){
 	$("#article_content1_4").html(string_content[3]);
 
 
+	$("#article_title2-1").html(string_title[4]);
+	$("#content2-1-1-title").html(string_content[4][0]);
+	// $("#content2-1-1-body")
+	$("#content2-1-2-title").html(string_content[4][1]);
+	$("#content2-1-3-title").html(string_content[4][2]);
+	$("#content2-1-4-title").html(string_content[4][3]);
+	$("#content2-1-5-title").html(string_content[4][4]);
+
+	$("#article_title2-2").html(string_title[5]);
+	$("#content2-2-1-title").html(string_content[5][0]);
+	// $("#content2-1-1-body")
+	$("#content2-2-2-title").html(string_content[5][1]);
+	$("#content2-2-3-title").html(string_content[5][2]);
+	$("#content2-2-4-title").html(string_content[5][3]);
+	$("#content2-2-5-title").html(string_content[5][4]);
+
+	$("#article_title2-3").html(string_title[6]);
+	$("#content2-3-1-title").html(string_content[6][0]);
+	// $("#content2-1-1-body")
+	$("#content2-3-2-title").html(string_content[6][1]);
+	$("#content2-3-3-title").html(string_content[6][2]);
+	$("#content2-3-4-title").html(string_content[6][3]);
+	$("#content2-3-5-title").html(string_content[6][4]);
+
+	$("#article_title2-4").html(string_title[7]);
+	$("#content2-4-1-title").html(string_content[7][0]);
+	// $("#content2-1-1-body")
+	$("#content2-4-2-title").html(string_content[7][1]);
+	$("#content2-4-3-title").html(string_content[7][2]);
+	$("#content2-4-4-title").html(string_content[7][3]);
+	$("#content2-4-5-title").html(string_content[7][4]);
+
+
 	$("#article_title3_1").html(string_title[8]);
 	$("#article_thumbnail3_1").html(string_thumbnail[8][0]);
 	$("#article_content3_1").html(string_content[8]);
@@ -52,7 +85,6 @@ $(function(){
 	$("#article_title3_1").html(string_title[11]);
 	$("#article_thumbnail3_1").html(string_thumbnail[11][0]);
 	$("#article_content3_1").html(string_content[11]);
-
 	},2000);
 
 	

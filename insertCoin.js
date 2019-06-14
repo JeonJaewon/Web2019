@@ -163,13 +163,21 @@ $(window).ready(function(){
 		$("#article1-4").css("top","40%");
 
 		$("#article2-1").css("left","1%");
+		$("#article2-1>div.article_thumbnail").css("display","block");
+		$("#article2-1>div.article_content").css("display","none");
 		$("#article2-1").css("top","1%");
 		$("#article2-2").css("left","50%");
+		$("#article2-2>div.article_thumbnail").css("display","block");
+		$("#article2-2>div.article_content").css("display","none");
 		$("#article2-2").css("top","1%");
 		$("#article2-3").css("top","40%");
 		$("#article2-3").css("left","1%");
+		$("#article2-3>div.article_thumbnail").css("display","block");
+		$("#article2-3>div.article_content").css("display","none");
 		$("#article2-4").css("left","50%");
 		$("#article2-4").css("top","40%");
+		$("#article2-4>div.article_thumbnail").css("display","block");
+		$("#article2-4>div.article_content").css("display","none");
 
 		$("#article3-1").css("left","1%");
 		$("#article3-1").css("top","1%");
@@ -260,24 +268,32 @@ $("div.small_article").click(function(e){
 					switch(indexNum){
 					case 1:
 						$("#article2-1").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article2-1>div.article_thumbnail").css("display","none");
+						$("#article2-1>div.article_content").css("display","block");						
 						$("#article2-2").fadeOut();
 						$("#article2-3").fadeOut();
 						$("#article2-4").fadeOut();
 					break;
 					case 2:
 						$("#article2-2").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article2-2>div.article_thumbnail").css("display","none");
+						$("#article2-2>div.article_content").css("display","block");
 						$("#article2-1").fadeOut();
 						$("#article2-3").fadeOut();
 						$("#article2-4").fadeOut();
 					break;
 					case 3:
 						$("#article2-3").animate({height:winHeight, width:winWidth},1000,"swing");
+						$("#article2-3>div.article_thumbnail").css("display","none");
+						$("#article2-3>div.article_content").css("display","block");
 						$("#article2-1").fadeOut();
 						$("#article2-2").fadeOut();
 						$("#article2-4").fadeOut();
 					break;
 					case 4:
 						$("#article2-4").animate({height:winHeight, width:winWidth,left:"40px"},1000,"swing");
+						$("#article2-4>div.article_thumbnail").css("display","none");
+						$("#article2-4>div.article_content").css("display","block");
 						$("#article2-1").fadeOut();
 						$("#article2-3").fadeOut();
 						$("#article2-2").fadeOut();
