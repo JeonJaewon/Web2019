@@ -19,11 +19,6 @@ var return_content=new Array;
 	
 
 // });
-
-
-
-
-
 function getJson_title(contentID){
 
 	var json_path=jsonFileID+contentID+".txt";
