@@ -385,7 +385,7 @@ nav ul li a:focus {
 	vertical-align: middle;
 	height:8%;
 	font-family: 'Gugi', cursive;
-	display:none;
+	/*display:none;*/
 	/*background-color:orange;*/
 	/*background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,90,1) 0%, rgba(238,79,119,1) 79%, rgba(238,79,138,1) 100%);*/
 }

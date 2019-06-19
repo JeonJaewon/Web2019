@@ -47,7 +47,7 @@ $(window).ready(function(){
 	$("#settings_button").css("top", $(window).height() - 100 + "px")
 	$("#up_arrow_button").css("top", $(window).height() - 170 + "px")
 	$("#night_mode_button").css("top", $(window).height() - 240 + "px")
-	$("#esports_description").html(getJson_content("content_2000")[12]);
+	
 
 	$("#settings_button").click(function(){
 		if(!settings_on){
@@ -166,7 +166,7 @@ $(window).ready(function(){
 		$("#article2-1").css("left","1%");
 		$("#article2-1>div.article_thumbnail").css("display","block");
 		$("#article2-1>div.article_content").css("display","none");
-		$(".article_title").css("display","none");
+		// $(".article_title").css("display","none");
 		$("#article2-1").css("top","1%");
 		$("#article2-2").css("left","50%");
 		$("#article2-2>div.article_thumbnail").css("display","block");
