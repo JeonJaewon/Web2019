@@ -5,6 +5,7 @@
 var string_title1=new Array;
 var string_thumbnail=new Array;
 var string_content=new Array;
+var string_pic=new Array;
 
 
 
@@ -16,6 +17,8 @@ $(function(){
 	string_title=getJson_title("content_2000");
 	string_thumbnail=getJson_content("content_2000");
 	string_content=getJson_cURL("content_2000");
+	string_pic=getJson_cPIC("content_2000");
+
 
 	$("#article_title1_1").html(string_title[0]);
 	$("#article_thumbnail1_1").html(string_thumbnail[0][1]);
@@ -77,18 +80,19 @@ $(function(){
 
 
 	$("#article_title3_2").html(string_title[9]);
-	$("#article_thumbnail3_2").html(string_thumbnail[9][0]);
-	$("#article_content3_2").html(string_content[9]);
-
+	$("#article_thumbnail3_2").append(string_thumbnail[9][0]);
+	// $("#article_content3_2").html(string_pic[9][0]);
+	$("#article_content3_2").attr("src",string_pic[9][0]);
 
 	$("#article_title3_3").html(string_title[10]);
-	$("#article_thumbnail3_3").html(string_thumbnail[10][0]);
-	$("#article_content3_3").html(string_content[10]);
-
+	$("#article_thumbnail3_3").append(string_thumbnail[10][0]);
+	// $("#article_content3_3").html(string_content[10]);
+	$("#article_content3_3").attr("src",string_pic[10][0]);
 
 	$("#article_title3_4").html(string_title[11]);
-	$("#article_thumbnail3_4").html(string_thumbnail[11][0]);
-	$("#article_content3_4").html(string_content[11]);
+	$("#article_thumbnail3_4").append(string_thumbnail[11][0]);
+	// $("#article_content3_4").html(string_content[11]);
+	$("#article_content3_4").attr("src",string_pic[11][0]);
 	},2000);
 
 	
