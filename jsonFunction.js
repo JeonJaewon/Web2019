@@ -1,5 +1,6 @@
 
-var jsonFileID="http://insertcoin.top/JSON/json_";
+ var jsonFileID="/Web2019/JSON/json_";
+//var jsonFileID="/Web2019/JSON/json_";
 
 var return_title=new Array;
 var return_cID=new Array;
@@ -18,11 +19,6 @@ var return_content=new Array;
 	
 
 // });
-
-
-
-
-
 function getJson_title(contentID){
 
 	var json_path=jsonFileID+contentID+".txt";

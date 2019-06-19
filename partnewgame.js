@@ -8,6 +8,7 @@ var string_content=new Array;
 var string_pic=new Array;
 
 
+
 $(function(){
 
 	initJson("content_2000");
@@ -19,24 +20,36 @@ $(function(){
 	string_pic=getJson_cPIC("content_2000");
 
 	$("#article_title1_1").html(string_title[0]);
-	$("#article_thumbnail1_1").html(string_thumbnail[0][1]);
+	//$("#article_thumbnail1_1").html(string_thumbnail[0][0]);
 	$("#article_content1_1").html(string_content[0]);
+	var url0="url('"+string_pic[0]+"')";
+	$("#article_thumbnail1_1").css({"background":url0,"background-size":"100%"});
+
 
 	$("#article_title1_2").html(string_title[1]);
-	$("#article_thumbnail1_2").html(string_thumbnail[1][0]);
+	//$("#article_thumbnail1_2").html(string_thumbnail[1][0]);
 	$("#article_content1_2").html(string_content[1]);
+	var url1="url('"+string_pic[1]+"')";
+	$("#article_thumbnail1_2").css({"background":url1,"background-size":"100%"});
+
 
 	$("#article_title1_3").html(string_title[2]);
-	$("#article_thumbnail1_3").html(string_thumbnail[2][1]);
+	//$("#article_thumbnail1_3").html(string_thumbnail[2][1]);
 	$("#article_content1_3").html(string_content[2]);
+	var url2="url('"+string_pic[2]+"')";
+	$("#article_thumbnail1_3").css({"background":url2,"background-size":"100%"});
+
+
 
 	$("#article_title1_4").html(string_title[3]);
-	$("#article_thumbnail1_4").html(string_thumbnail[3][0]);
+	//$("#article_thumbnail1_4").html(string_thumbnail[3][0]);
 	$("#article_content1_4").html(string_content[3]);
-
 	var url3="url('"+string_pic[3]+"')";
 	$("#article_thumbnail1_4").css({"background":url3,"background-size":"100%"});
 
+
+
+	//여기서부터 partition2
 
 	$("#article_title2-1").html(string_title[4]);
 	$("#content2-1-1-title").html(string_thumbnail[4][0]);
@@ -80,6 +93,7 @@ $(function(){
 	$("#content2-2-2-title").html(string_thumbnail[5][1]);
 	$("#content2-2-3-title").html(string_thumbnail[5][2]);
 	$("#content2-2-4-title").html(string_thumbnail[5][3]);
+
 	$("#article_title2-3").html(string_title[6]);
 	$("#content2-3-1-title").html(string_thumbnail[6][0]);
 	$("#introduce3").html(string_thumbnail[6][1]);
@@ -96,6 +110,7 @@ $(function(){
 	$("#article_link2-3-5").attr("href",string_pic[6][9]);
 	// $("#article_link2-3-6").attr("href",string_pic[6][10]);
 
+	
 	$("#article_title2-4").html(string_title[7]);
 	$("#content2-4-1-title").html(string_thumbnail[7][0]);
 	$("#introduce4").html(string_thumbnail[7][1]);
@@ -118,19 +133,20 @@ $(function(){
 	$("#article_content3_1").html(string_content[8]);
 
 
-	$("#article_title3_1").html(string_title[9]);
-	$("#article_thumbnail3_1").html(string_thumbnail[9][0]);
-	$("#article_content3_1").html(string_content[9]);
+	$("#article_title3_2").html(string_title[9]);
+	$("#article_thumbnail3_2").append(string_thumbnail[9][0]);
+	// $("#article_content3_2").html(string_pic[9][0]);
+	$("#article_content3_2").attr("src",string_pic[9][0]);
 
+	$("#article_title3_3").html(string_title[10]);
+	$("#article_thumbnail3_3").append(string_thumbnail[10][0]);
+	// $("#article_content3_3").html(string_content[10]);
+	$("#article_content3_3").attr("src",string_pic[10][0]);
 
-	$("#article_title3_1").html(string_title[10]);
-	$("#article_thumbnail3_1").html(string_thumbnail[10][0]);
-	$("#article_content3_1").html(string_content[10]);
-
-
-	$("#article_title3_1").html(string_title[11]);
-	$("#article_thumbnail3_1").html(string_thumbnail[11][0]);
-	$("#article_content3_1").html(string_content[11]);
+	$("#article_title3_4").html(string_title[11]);
+	$("#article_thumbnail3_4").append(string_thumbnail[11][0]);
+	// $("#article_content3_4").html(string_content[11]);
+	$("#article_content3_4").attr("src",string_pic[11][0]);
 	},2000);
 
 	

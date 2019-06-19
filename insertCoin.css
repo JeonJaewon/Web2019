@@ -359,6 +359,7 @@ nav ul li a:focus {
 	background-color:black;
 	font-family: 'Nanum Gothic Coding', monospace;
 	line-height:150%;
+
 }
 
 .small_article{
@@ -369,6 +370,7 @@ nav ul li a:focus {
 	height:35%;
 	text-align:center;
 	background-color: white;
+	/*border:1px dotted black;*/
 	z-index: 10;
 	overflow:hidden;
 }
@@ -398,6 +400,7 @@ nav ul li a:focus {
 	margin:0 auto;
 	color: white;
 	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,138,1) 0%, rgba(238,79,119,1) 21%, rgba(238,79,90,1) 100%);
+  	
   	/*position:relative;*/
 }
 
@@ -699,25 +702,21 @@ button:hover {
 	width:70%;
 	height:100%;
 }
-#article2-1>.article_content{
-	background-color: rgb(31,78,121);
-}
-+#article2-3>.article_content{
-	background-color: rgb(56,87,35);
-}
-#article2-4>.article_content{
-	background-color: rgb(51,63,80);
-}
-#streamer2_right{
-	float:right;
-	width:55%;
-}
 #streamer1_left>img{
 	width:70%;
 
 }
 #article2-1{
 	background-color:white;
+}
+#article2-1>.article_content{
+	background-color: rgb(31,78,121);
+}
+#article2-3>.article_content{
+	background-color: rgb(56,87,35);
+}
+#article2-4>.article_content{
+	background-color: rgb(51,63,80);
 }
 #article2-2>.article_content>img{
 	width:100%;
@@ -732,9 +731,13 @@ button:hover {
 	background-image:url("esca2.png");
 	background-size:100% 100%;
 }
+#streamer2_right{
+	float:right;
+	width:55%;
+}
 #streamer3_left{
 	float:left;
-		width:30%;
+	width:30%;
 }
 #streamer3_right{
 	float:right;
@@ -745,6 +748,7 @@ button:hover {
 	width:100%;
 }
 #streamer4_right{
+	float:right;
 	width:0;
 	display:none;
 }
@@ -778,9 +782,4 @@ button:hover {
 	font-size:1.5em;
 	font-weight:bold;
 	margin-bottom:3%;
-}
-#partition2{
-	/*background-image:url("newspaper_background.png");
-	background-repeat:no-repeat;
-	background-size: 100% 110%;*/
 }

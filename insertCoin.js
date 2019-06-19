@@ -47,6 +47,7 @@ $(window).ready(function(){
 	$("#settings_button").css("top", $(window).height() - 100 + "px")
 	$("#up_arrow_button").css("top", $(window).height() - 170 + "px")
 	$("#night_mode_button").css("top", $(window).height() - 240 + "px")
+	$("#esports_description").html(getJson_content("content_2000")[12]);
 
 	$("#settings_button").click(function(){
 		if(!settings_on){
@@ -198,6 +199,7 @@ $(window).ready(function(){
 		$(".btn-3").on("click",{url:"https://overwatchleague.com/ko-kr/schedule", winattributes : "resize=1"}, maxopen);
 		$(".btn-4").on("click",{url:"http://www.dailyesports.com/", winattributes : "resize=1"}, maxopen);
 		$(".btn-5").on("click",{url:"http://www.inven.co.kr/webzine/", winattributes : "resize=1"}, maxopen);
+
 
 		$("#right_arrow").click(function(){ //슬라이드쇼 오른쪽 화살표 클릭
 		$("img.slide").fadeOut(700);

@@ -1,34 +1,34 @@
 ﻿[
 {
-"title" : "Title 1000",
+"title" : "콜 오브 듀티",
 "cID":"content_1000",
 "cURL":"http://url.1001.com",
-"cPIC":"/NewGame_imgs/card0.jpg",
+"cPIC":"/NewGame_imgs/ng1.gif",
+"content":["17:00 서울 LoL PARK","20:00 서울 LoL PARK"]
+},
+
+{
+"title" : "사이버펑크 2077",
+"cID":"content_1001",
+"cURL":"http://url.1001.com",
+"cPIC":"/NewGame_imgs/card1_1.jpg",
 "content":[" "," "]
 },
 
 {
-"title" : "Title 1001",
-"cID":"content_1001",
-"cURL":"http://url.1001.com",
-"cPIC":["griffin.png","geng.png","kt.png","hanhwa.png"],
-"content":["17:00 서울 LoL PARK","20:00 서울 LoL PARK"]
-},
-
-{
-"title" : "Title 1002",
+"title" : "젤다의 전설",
 "cID":"content_1002",
 "cURL":"",
-"cPIC":["griffin.png","geng.png","kt.png","hanhwa.png"],
-"content":["17:00 서울 LoL PARK","20:00 서울 LoL PARK"]
+"cPIC":"/NewGame_imgs/card2_1.jpg",
+"content":[" "," "]
 },
 
 {
-"title" : "Title 1003",
+"title" : "Rainbow Six",
 "cID":"content_1003",
 "cURL":"",
-"cPIC":["griffin.png","geng.png","kt.png","hanhwa.png"],
-"content":["17:00 서울 LoL PARK","20:00 서울 LoL PARK"]
+"cPIC":"/NewGame_imgs/card3_1.jpg",
+"content":[" "," "]
 },
 
 {
@@ -73,8 +73,7 @@
 "cID":"content_1009",
 "cURL":"",
 "cPIC":["article3_1.jpg"],
-"content":["던그리드는 국내 개발팀이 만든 인디 게임으로, 귀여운 그래픽에 죽어도 죽어도 다시 플레이하게 되는 중독성 있는 게임 플레이가 인상적인 게임입니다.인디 게임 개발이 활발하지 않은 국내에서 상업적으로 성공한 기념비적인 게임입니다. 게임 유통 플랫폼 스팀에서 국내 판매량 2위, 전세계 판매량 32위를 기록할 정도로 많은 인기를 끌었습니다. 던그리드는 무작위로 생성되는 던전을 1층부터 시작해 클리어하는 게임입니다. 캐릭터가 죽으면 1층부터 다시 시작해야 하지만, 이전에 플레이로부터 아이템 등을 이어받는 요소가 있어 상대적으로 가볍게 즐길 수 있습니다. 국내에서도 게임을 잘 만든다면 인디 게임으로 성공할 수 있다는 선례를 남긴 게임입니다."]
-
+"content":["<pre>던그리드는 국내 개발팀이 만든 인디 게임으로, 귀여운 그래픽에 죽어도 죽어도 다시 플레이하게 되는 중독성 있는 게임 플레이가 인상적인 게임입니다.인디 게임 개발이 활발하지 않은 국내에서 상업적으로 성공한 기념비적인 게임입니다. 게임 유통 플랫폼 스팀에서 국내 판매량 2위, 전세계 판매량 32위를 기록할 정도로 많은 인기를 끌었습니다.</pre>","<pre>던그리드는 무작위로 생성되는 던전을 1층부터 시작해 클리어하는 게임입니다. 캐릭터가 죽으면 1층부터 다시 시작해야 하지만, 이전에 플레이로부터 아이템 등을 이어받는 요소가 있어 상대적으로 가볍게 즐길 수 있습니다. 국내에서도 게임을 잘 만든다면 인디 게임으로 성공할 수 있다는 선례를 남긴 게임입니다.</pre>"]
 },
 
 {
@@ -91,5 +90,14 @@
 "cURL":"",
 "cPIC":["article3_3.png"],
 "content":["길건너 친구들은 2015년 발매된 모바일 게임입니다. 호주 출신의 3명의 개발자가 만든 게임으로 간단한 게임성과 특유의 중독성으로 큰 인기를 얻었습니다. 이 게임도 멀티 플랫폼으로 발매되어 유니티의 장점을 잘 활용한 게임이라고 할 수 있겠습니다. 또 유니티 애즈를 활용하여 굉장한 광고 수익을 올렸습니다. 앱스토어 런칭 90일만에 광고 수익으로만 30억원을 올렸다고 합니다. 3명이 개발한 소규모 프로젝트지만 엔진을 잘 활용했고, 또 게임에 방해되지 않는 선에서 광고를 통한 수익을 얻어 상업적으로도 큰 성공을 이룬 게임의 대표적인 예로 들 수 있습니다.이렇게 유니티로 개발된 세 가지 게임을 알아보았습니다. 이 게임들이 유니티를 개발 엔진으로 선택한 이유, 활용한 방법들을 참고하면 훨씬 더 좋은 게임을 개발할 수 있지 않을까 하는 생각이 듭니다."]
+},
+{
+"title" : "esports",
+"cID":"content_1012",
+"cURL":"",
+"cPIC":"",
+"content":"E-sports  is a form of competition using video games.<br><br>Most commonly, esports takes the form of organized, multiplayer video game competitions, particularly between professional players, individually or as teams. <br><br>Although organized online and offline competitions have long been a part of video game culture,these were largely between amateurs until the late 2000s, when participation by professional gamers and spectatorship in these events through live streaming saw a large surge in popularity.<br><br>By the 2010s, esports was a significant factor in the video game industry, with many game developers actively designing toward a professional esports subculture."
 }
+
+
 ]
