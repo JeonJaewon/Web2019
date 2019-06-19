@@ -1,6 +1,5 @@
 
- var jsonFileID="http://insertcoin.top/JSON/json_";
-//var jsonFileID="/Web2019/JSON/json_";
+var jsonFileID="http://insertcoin.top/JSON/json_";
 
 var return_title=new Array;
 var return_cID=new Array;

@@ -357,6 +357,9 @@ nav ul li a:focus {
 	padding:2% 0 0 2%;
 	position:relative;
 	background-color:black;
+	font-family: 'Nanum Gothic Coding', monospace;
+	line-height:150%;
+
 }
 
 .small_article{
@@ -367,7 +370,7 @@ nav ul li a:focus {
 	height:35%;
 	text-align:center;
 	background-color: white;
-	border:1px dotted black;
+	/*border:1px dotted black;*/
 	z-index: 10;
 	overflow:hidden;
 }
@@ -382,6 +385,7 @@ nav ul li a:focus {
 	vertical-align: middle;
 	height:8%;
 	font-family: 'Gugi', cursive;
+	display:none;
 	/*background-color:orange;*/
 	/*background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,90,1) 0%, rgba(238,79,119,1) 79%, rgba(238,79,138,1) 100%);*/
 }
@@ -391,11 +395,11 @@ nav ul li a:focus {
 	/*padding-top:  5%;
 	padding-bottom: 5%;*/
 	text-align: center;
-	height: 80%;
-	width: 95%;
+	height: 100%;
+	width: 100%;
 	margin:0 auto;
 	color: white;
-	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,138,1) 0%, rgba(238,79,119,1) 21%, rgba(238,79,90,1) 100%);
+	/*background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,138,1) 0%, rgba(238,79,119,1) 21%, rgba(238,79,90,1) 100%);*/
   	/*position:relative;*/
 }
 
@@ -432,10 +436,11 @@ nav ul li a:focus {
 .article_status{
 	position: absolute;
 	overflow: hidden;
-	height: 6%;
+	height: 7%;
 	width: 25%;
 	right: 3%;
 	top: 8%;
+	color:white;
 	/*background-color: rgb(255,192,0);*/
 }
 .like_counter{	
@@ -744,4 +749,9 @@ button:hover {
 	word-break:break-all;
 	margin:5% 0 5% 3%;
 	background-color:blue;
+}
+#partition2{
+	/*background-image:url("newspaper_background.png");
+	background-repeat:no-repeat;
+	background-size: 100% 110%;*/
 }
