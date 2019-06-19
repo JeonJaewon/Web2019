@@ -147,11 +147,12 @@ $(function(){
 	$("#article_thumbnail3_4").append(string_thumbnail[11][0]);
 	// $("#article_content3_4").html(string_content[11]);
 	$("#article_content3_4").attr("src",string_pic[11][0]);
-	},2000);
-
-	$("#esports_description").html(getJson_content("content_2000")[12]);
-
 	
+
+	//partition4
+	$("#esports_description").html(string_thumbnail[12]);
+
+	},2000);
 
 
 });
