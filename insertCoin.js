@@ -47,7 +47,7 @@ $(window).ready(function(){
 	$("#settings_button").css("top", $(window).height() - 100 + "px")
 	$("#up_arrow_button").css("top", $(window).height() - 170 + "px")
 	$("#night_mode_button").css("top", $(window).height() - 240 + "px")
-	$("#esports_description").html(getJson_content("content_2000")[12]);
+	
 
 	$("#settings_button").click(function(){
 		if(!settings_on){

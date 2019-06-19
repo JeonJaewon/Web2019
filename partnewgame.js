@@ -149,6 +149,8 @@ $(function(){
 	$("#article_content3_4").attr("src",string_pic[11][0]);
 	},2000);
 
+	$("#esports_description").html(getJson_content("content_2000")[12]);
+
 	
 
 
