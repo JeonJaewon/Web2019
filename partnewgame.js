@@ -22,24 +22,30 @@ $(function(){
 	$("#article_title1_1").html(string_title[0]);
 	//$("#article_thumbnail1_1").html(string_thumbnail[0][0]);
 	$("#article_content1_1").html(string_content[0]);
-	$("#article_thumbnail1_1").css({"background":"url('/NewGame_imgs/card0.jpg')","background-size":"100%"});
+	var url0="url('"+string_pic[0]+"')";
+	$("#article_thumbnail1_1").css({"background":url0,"background-size":"100%"});
 
 
 	$("#article_title1_2").html(string_title[1]);
 	//$("#article_thumbnail1_2").html(string_thumbnail[1][0]);
 	$("#article_content1_2").html(string_content[1]);
-	$("#article_thumbnail1_2").css({"background":"url('/NewGame_imgs/card1_1.jpg')","background-size":"100%"});
+	var url1="url('"+string_pic[1]+"')";
+	$("#article_thumbnail1_2").css({"background":url1,"background-size":"100%"});
 
 
 	$("#article_title1_3").html(string_title[2]);
 	//$("#article_thumbnail1_3").html(string_thumbnail[2][1]);
 	$("#article_content1_3").html(string_content[2]);
-	$("#article_thumbnail1_3").css({"background":"url('/NewGame_imgs/card2_1.jpg')","background-size":"100%"});
+	var url2="url('"+string_pic[2]+"')";
+	$("#article_thumbnail1_3").css({"background":url2,"background-size":"100%"});
+
+
 
 	$("#article_title1_4").html(string_title[3]);
 	//$("#article_thumbnail1_4").html(string_thumbnail[3][0]);
 	$("#article_content1_4").html(string_content[3]);
-	$("#article_thumbnail1_4").css({"background":"url('/NewGame_imgs/card3_1.jpg')","background-size":"100%"});
+	var url3="url('"+string_pic[3]+"')";
+	$("#article_thumbnail1_4").css({"background":url3,"background-size":"100%"});
 
 
 	$("#article_title2-1").html(string_title[4]);

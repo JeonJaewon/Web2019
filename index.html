@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase.js"></script>
+	<script type="text/javascript" src="database.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="insertCoin.css">
+	<script type="text/javascript" src="insertCoin.js"></script>
+	<script type="text/javascript" src="onLike.js"></script>
+	<script type="text/javascript" src="Maxfunction.js"></script>
+	<script type="text/javascript" src="partnewgame.js"></script>
+	<script type="text/javascript" src="jsonFunction.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Gugi&display=swap" rel="stylesheet">
+	<title>Insert Coin</title>
+</head>
+<body>
+
+<!-- 	<div id="loading_body">
+		<img src="loading.gif" id="loading" style="width: 50%; height: 50%"/>
+	</div> -->
+
+	<!-- <div id="main_body"> -->
+
+	<div id="main_header">
+		<!-- bina added start-->
+		<img src="main.png">
+		<div id = "main_title"> Insert Coin</div>
+		<nav>
+			<ul>
+				<li><a href="#" id ="hottest">Hottest</a></li>
+				<li><a href="#" id ="newgame">New Game</a></li>
+				<li><a href="#" id = "gameengine">Game Engine</a></li>
+				<li><a href="#" id = "live">Live</a></li>
+				<li><a href="#" id ="esports">E-Sports</a></li>
+			</ul>
+		</nav>
+	<!-- bina added end -->
+	</div>
+
+	<div class="setting_button" id="settings_button">
+		<img src="settings.png" style="max-width: 100%; max-height: 100%"/>
+	</div>
+	<div class="setting_button" id="up_arrow_button">
+		<img src="up_arrow.png" style="max-width: 100%; max-height: 100%"/>
+	</div>
+	<div class="setting_button" id="night_mode_button">
+		<img src="night_mode.png" style="max-width: 100%; max-height: 100%"/>
+	</div> 
+		
+	<div id="slide_show" >
+		<img class="slide" id="slide1" style="background-color: yellow">
+		<img class="slide" id="slide2" style="background-color: red">
+		<img class="slide" id="slide3" style="background-color: green">
+		<div id="left_arrow">
+			<img src="left_arrow.png" style="max-width: 100%; max-height: 100%"/>
+		</div>
+		<div id="right_arrow">
+			<img src="right_arrow.png" style="max-width: 100%; max-height: 100%"/>
+		</div>
+	</div>
+		<!-- bina added start-->
+	<div class="article" id = "newgamespace">
+				<!-- <img src="newgame2.gif" width="101%" /> -->
+		<video loop muted autoplay="autoplay" width="100%">
+ 		 <source src="gamevideo.mp4" type="video/mp4" />
+		Your browser does not support the video tag.
+	</div>
+	<div class="article" style="overflow: hidden; text-align: center;" id = "gameenginespace">
+		<div><img src="unity.png" style="margin-top:2.5%; width: 20%; height: 20%; opacity: 0.9;"/></div>
+		<div style="height:100%;">
+			<div id ="article_title" style="margin-top: 1%; margin-bottom: 2%">
+				<span>MADE</span>
+				<span style="color:white">WITH</span>
+				<span style="color:black">UNITY</span>
+			</div>
+			<h2 style="color:white">START BRINGING YOUR VISION TO LIFE TODAY</h2>
+			<div class="article_menu" style="margin-top:3%; border-radius:7px; background-color:#990099; color:white;"> 
+			<a href="https://unity.com/kr/learn" target="_blank">LEARN UNITY IN UNITY.COM</a></div>
+			<div class="article_menu" style="margin-top:2%; border-radius:7px; background-color:#990099; color:white;">
+
+			<a href="https://assetstore.unity.com/g/top-assets-2018?gclid=Cj0KCQjwxYLoBRCxARIsAEf16-v-A61rbYmwVP-jSDbNsbjv_LTnXAReci3-H215PGlG3RJK73fICNgaAutJEALw_wcB" target="_blank">2018 TOP ASSETS IN ASSET STORE</a></div>
+			<div class="article_menu" id="gameengineButton" style="margin-top:2%; border-radius:7px; background-color:#990099;">
+			VIEW ALL CONTENTS
+			</div>
+		</div>
+	</div>
+	<div class="article" id = "livespace">
+		<div id="livearticle">
+			<img src="on_air.png"  id="onair" style="max-width: 100%; max-height: 100%"/>
+			<img src="live.jpg"  id="streamer"style="max-width: 100%; max-height: 100%"/>
+			<div id="live_left">
+				<div id="stream_now">STREAM NOW</div>
+			<div id="live_article_title">THIS-MONTH <br><span>RECOMMANDED&nbsp:)</span><br><div id="game_streamer">GAME STREAMER</div></div>
+			<div id= "live_article_text">
+				<!-- Just Be Here and Join Us -->
+			</div>
+			</div>
+			<div id="live_right">
+				<div class="live_article_menu"><a href="https://www.youtube.com/" style="color:ivory">YOUTUBE</a></div>
+				<div class="live_article_menu2">RECOMMANDED</div>
+				<div class="live_article_menu3"><a href="https://www.twitch.tv" style="color:ivory">TWITCH</a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="article" id = "esportsspace">
+		<img src="EsportsNoobs_Image1.jpg">
+		<div id = "esportsarticle">
+			<div id ="checkout">CHECK OUT</div>
+			<div id ="article_title">MOST POPULAR <Br><span>E-SPORTS</span> LEAGUE</div>
+			<div id ="article_text">What is your favorite game? <br>Then what is your favorite E-SPORTS LEAGUE?</div>
+			<div class = "article_menu"> E-Sports Schedule</div>
+			<div class="article_menu"> E-sports News </div>
+			<div id = "esportsbutton"> View All Contents</div>
+		</div>
+	</div>		
+		<!-- bina added end -->
+
+		<div class="article_partition" id="partition1"><!-- 4 분할 더 보기 기능 -->
+		<div class="small_article article1" id="article1-1">
+			<div class="article_title" id="article_title1_1">CardNews 1</div>
+			<div class="article_thumbnail" id="article_thumbnail1_1"></div> <!-- 미리보기 -->
+			<div class="article_content" id="article_content1_1"></div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+			</div>
+		</div>
+		<div class="small_article article2" id="article1-2">
+			<div class="article_title" id="article_title1_2">CardNews 1</div>
+			<div class="article_thumbnail" id="article_thumbnail1_2"></div> <!-- 미리보기 -->
+			<div class="article_content" id="article_content1_2"></div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article3" id="article1-3">
+			<div class="article_title" id="article_title1_3">CardNews 1</div>
+			<div class="article_thumbnail" id="article_thumbnail1_3"></div> <!-- 미리보기 -->
+			<div class="article_content" id="article_content1_3"></div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article4" id="article1-4">
+			<div class="article_title" id="article_title1_4">CardNews 1</div>
+			<div class="article_thumbnail" id="article_thumbnail1_4"></div> <!-- 미리보기 -->
+			<div class="article_content" id="article_content1_4"></div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+		<div class="article_partition" id="partition2"><!-- 4 분할 더 보기 기능 -->
+		<div class="small_article article1" id="article2-1">
+			<div class="article_title" id="article_title2-1">게임은 재능이지 - 악동 김블루</div>
+			<div class="article_thumbnail">
+				<img src="kimblue.png" class="streamer_card">
+			</div> <!-- 미리보기 -->
+			<div class="article_content">
+				<div id="streamer1_left">
+					<div id="introduce1">
+						여기 배그에서 숨바꼭질을 하고, 카트라이더도 하고, 심지어 어벤져스 엔드게임를 재현하기까지 하는 스트리머가 있다. 
+PUBG의 공식 파트너로 직접 게임을 커스텀 할 수 있으며, 이를 이용해 다른 사람들은 시도하지 못하는 다양한 컨텐츠들을 만들며 팬들과 게임 플레이를 즐기기도 한다. 
+거기에 빠지지 않는 고이다 못해 석유가 되어가는 실력으로 나란히 달리고 있는 차에서 옆 차를 터뜨리고, 핵을 쓰는 플레이어 두 명을 수류탄 자폭으로 한 번에 잡는 천재적인 플레이를 보여주기도 한다. 
+배그의 진정한 고인물들만 알고 있는 다양한 팁들을 플레이 중 자연스럽게 알려주기도 해서 그의 방송을 보고있으면 왠지 모르게 나도 점점 실력이 늘어가는 것 같은 느낌을 받을 수 있다.(물론 그런다고 정말 실력이 늘어나는 것은 아니지만) 
+다양한 상황으로 커스텀된 배틀그라운드와 미친듯한 꿀팁들, 상위 1% 고인물의 실력에 훈훈한 목소리까지. 6월의 첫 번째 추천 스트리머는 유튜브 150만 구독자수를 자랑하는 - 악동 김블루이다.
+					</div>
+					<div class="content2-1">
+						<div id="content2-1-1-title">
+							컨텐츠 제목 1
+						</div>
+						<div id="content2-1-1-body">
+							컨텐츠 바디 1
+						</div>
+					</div>
+					<div class="content2-1">
+						<div id="content2-1-2-title">
+							컨텐츠 제목 2
+						</div>
+						<div id="content2-1-2-body">
+							컨텐츠 바디 2
+						</div>
+					</div>
+					<div class="content2-1">
+						<div id="content2-1-3-title">
+							컨텐츠 제목 3
+						</div>
+						<div id="content2-1-3-body">
+							컨텐츠 바디 3
+						</div>
+					</div>
+				</div>
+				<div id="streamer1_right">
+					<img src="kimblue2.png">
+				</div>
+			</div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article2" id="article2-2">
+			<div class="article_title" id="article_title2-2">이것이 프로다 - EscA</div>
+			<div class="article_thumbnail">
+				<img src="esca.png" class="streamer_card">
+			</div> <!-- 미리보기 -->
+			<div class="article_content">
+				<div id="streamer2_right">
+					<div id="introduce2">
+						다섯 종목 석권으로 대표되는, 국내 FPS판에서 역대급 커리어를 남기고 있는 프로게이머를 아십니까? 스페셜포스, 블랙스쿼드, 오버워치에 이어 이제는 배틀그라운드까지. 그의 플레이 영상을 보고있으면 자연스럽게 말문이 닫힙니다. 필자 또한 처음 그의 대회 영상을 봤을 때의 충격이 잊히지를 않습니다. 말 그대로 "저게 말이 돼?!"하는 상황을 자연스럽게 빚어내는 빈틈없는 에임과 정확한 상황판단, 반전에 반전을 만드는 충격적인 플레이까지. 이런 엄청난 실력과 경력을 가진 프로게이머가 방송을 한다면 그 방송은 믿고 봐도 되는 것 아닐까요. 트위치와 유튜브에서 활동하는 EscA, 천상계의 FPS 게임 실력을 감상해보고 싶다면 바로 아래의 추천 영상으로 이동하세요!
+						</div>
+					<div class="content2-2">
+						<div id="content2-2-1-title">
+							컨텐츠 제목 2-2-1
+						</div>
+						<div id="content2-2-1-body">
+							컨텐츠 바디 2-2-1
+						</div>
+					</div>
+					<div class="content2-2">
+						<div id="content2-2-2-title">
+							컨텐츠 제목 2
+						</div>
+						<div id="content2-2-2-body">
+							컨텐츠 바디 2
+						</div>
+					</div>
+					<div class="content2-2">
+						<div id="content2-2-3-title">
+							컨텐츠 제목 3
+						</div>
+						<div id="content2-2-3-body">
+							컨텐츠 바디 3
+						</div>
+					</div>
+					<div class="content2-2">
+						<div id="content2-2-4-title">
+							컨텐츠 제목 3
+						</div>
+						<div id="content2-2-4-body">
+							컨텐츠 바디 3
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article3" id="article2-3">
+			<div class="article_title" id="article_title2-3">배그는 상황극 아닌가요? - 혜안</div>
+			<div class="article_thumbnail">
+				<img src="hamm.png" class="streamer_card">
+			</div> <!-- 미리보기 -->
+			<div class="article_content">
+				<div id="streamer3_left">
+				<img src="hamm2.png">					
+				</div>
+				<div id="streamer3_right">
+					<div id="introduce3">
+						배틀그라운드를 플레이하는 자신의 모습을 떠올려보세요. 어떤 모습이 떠오르나요? 혼자 조용히 게임에 집중하고 있는 모습? 헤드셋을 끼고 마이크로 친구와 시끄럽게 대화를 나누며 플레이하는 모습? 대부분 진지하게 게임에 집중하고 있는 모습일 것입니다. 여기 솔로, 랜덤 듀오 혹은 스쿼드 등 분야를 가리지 않고 배그를 플레이하는 30분을 상황극으로 가득 채우는 스트리머가 있습니다. 랜덤으로 매칭된 상대와도 붙임성좋게 대화를 시도하고요, 종종 쓸데없는 아재개그를 날리기도 합니다. 분명 만난지 1분도 되지 않았지만 십년은 알아온 것 같은 친화력을 선보이기도 하지요. 하지만 그의 가장 큰 매력은 보는 사람도 같이 기분이 좋아지는 편안하고 소소하게 웃음이 터지는 플레이를 한다는 것에 있습니다. 썰렁한 드립들과 뛰어난(?) 연기로 만들어가는 재미있는 상황극들을 보고 있으면 내가 지금 보는 영상이 배틀그라운드 플레이 영상이 맞나 싶기도 합니다. 하지만 어디에 내놔도 빠지지 않는 실력으로 대부분 영상의 엔딩을 치킨으로 장식하기까지 하는 배율 연사 장인 - 6월의 세 번째 추천 스트리머, 혜안이었습니다!
+						</div>
+					<div class="content2-3">
+						<div id="content2-3-1-title">
+							컨텐츠 제목 2-2-1
+						</div>
+						<div id="content2-3-1-body">
+							컨텐츠 바디 2-2-1
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article4" id="article2-4">
+			<div class="article_title" id="article_title2-4">외쳐! 강!공!지!주! - 강지</div>
+			<div class="article_thumbnail">
+				<img src="ganggi.png" class="streamer_card">
+			</div> <!-- 미리보기 -->
+			<div class="article_content">
+				<div id="streamer4_left">
+					<div id="introduce4">
+						강지는 트위치와 유튜브에서 활동하는 샌드박스 네트워크 소속 스트리머이다.
+강아지를 좋아해서 지은 '강지'라는 닉네임으로 활동하고 있으며, 종합 게임 스트리머답게 스팀 게임들을 포함한 다양한 장르의 게임을 플레이한다. 
+배틀그라운드 플레이 시간은 거의 이천시간에 달하며, 정말 즐겨하는 게임 중 하나인 데드 바이 데이라이트는 생존마 수준으로 실력이 좋다. 그 외에도 다양한 게임들을 허스키한 목소리와 상남자스러운 성격, 재미있는 입담과 함께 플레이하는 모습을 방송한다. 본인은 싫어지만 강공 공주님이라는 뜻의 강공지주라는 별명이 유명하다. 공주님의 다양한 게임 플레이와 입담을 경험해보고 싶다면, 아래의 추천 영상들을 보는 것을 추천한다. 지금까지 6월의 네 번째 추천 스트리머, 강지였다.
+					</div>
+					<div class="content2-4">
+						<div id="content2-4-1-title">
+							컨텐츠 제목 2-2-1
+						</div>
+						<div id="content2-4-1-body">
+							컨텐츠 바디 2-2-1
+						</div>
+					</div>
+					
+				</div>
+				<div id="streamer4_right">
+					<img src="ganggi2.png">
+				</div>
+			</div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+		<div class="article_partition" id="partition3"><!-- 4 분할 더 보기 기능 -->
+		<div class="small_article article1" id="article3-1">
+			<div class="article_title" id="article_title3_1">CardNews 1</div>
+			<div class="article_thumbnail" id="article_thumbnail3_1">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article2" id="article3-2">
+			<div class="article_title" id="article_title3_2">CardNews 2</div>
+			<div class="article_thumbnail" id="article_thumbnail3_2">
+				<img id="article_content3_2" style="max-width: 100%; max-height: 100%; float: left;">
+			</div> <!-- 미리보기 -->
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article3" id="article3-3">
+			<div class="article_title" id="article_title3_3">CardNews 3</div>
+			<div class="article_thumbnail" id="article_thumbnail3_3">
+				<img id="article_content3_3" style="max-width: 100%; max-height: 100%; float: left;">
+			</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article4" id="article3-4">
+			<div class="article_title" id="article_title3_4">CardNews 4</div>
+			<div class="article_thumbnail" id="article_thumbnail3_4">
+				<img id="article_content3_4" style="max-width: 100%; max-height: 100%; float: left;">
+			</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+	</div> 
+
+
+
+	<div class="article_partition" id = "partition4" ><!-- 4 분할 더 보기 기능 -->
+		<div id = "esports_section">
+			<div id = "esports_section_left">
+				<div id ="esports_section_title"> E-SPORTS</div>
+				<div id = "esports_description"> "E-sports  is a form of competition using video games.<br><br>
+ Most commonly, esports takes the form of organized, multiplayer video game competitions, particularly between professional players, individually or as teams. <br><br>
+Although organized online and offline competitions have long been a part of video game culture,these were largely between amateurs until the late 2000s, when participation by professional gamers and spectatorship in these events through live streaming saw a large surge in popularity.<br> <br>By the 2010s, esports was a significant factor in the video game industry, with many game developers actively designing toward a professional esports subculture." </div>
+			</div>
+			<div id = "esports_section_right">
+				<div id ="date">
+					<span id="month"></span> 
+					<span id = "week"></span> 
+				</div>
+
+				<button class = "btn-1">
+					LCK SCHEDULE
+				</button>
+				<button class = "btn-2">
+					STAR2 SCHEDULE
+				</button>
+				<button class = "btn-3">
+					OVERWATCH SCHEDULE
+				</button>
+				<button class = "btn-4">
+					Latest News
+				</button>
+				<button class = "btn-5">
+					Inven 
+				</button>
+			</div>
+		</div>
+		<div class = "imgcover"></div>
+	</div>
+
+<!-- </div> -->
+</body>
+
+
+
+<!-- ______THIS PART IS FOR DATABASE CONNECTION______ -->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB23eupCYrLa_MjURxM3U7NA7LerL3OfmE",
+    authDomain: "webtest-3663d.firebaseapp.com",
+    databaseURL: "https://webtest-3663d.firebaseio.com",
+    projectId: "webtest-3663d",
+    storageBucket: "webtest-3663d.appspot.com",
+    messagingSenderId: "635235171221",
+    appId: "1:635235171221:web:df2702c0c9d4f512"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-database.js"></script>
+
+<!-- ______THIS PART IS FOR DATABASE CONNECTION______ -->
+</html>
