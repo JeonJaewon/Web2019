@@ -33,6 +33,9 @@ $(function(){
 	$("#article_thumbnail1_4").html(string_thumbnail[3][0]);
 	$("#article_content1_4").html(string_content[3]);
 
+	var url3="url('"+string_pic[3]+"')";
+	$("#article_thumbnail1_4").css({"background":url3,"background-size":"100%"});
+
 
 	$("#article_title2-1").html(string_title[4]);
 	$("#content2-1-1-title").html(string_content[4][0]);
