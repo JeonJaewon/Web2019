@@ -76,19 +76,19 @@ $(function(){
 	$("#article_content3_1").html(string_content[8]);
 
 
-	$("#article_title3_1").html(string_title[9]);
-	$("#article_thumbnail3_1").html(string_thumbnail[9][0]);
-	$("#article_content3_1").html(string_content[9]);
+	$("#article_title3_2").html(string_title[9]);
+	$("#article_thumbnail3_2").html(string_thumbnail[9][0]);
+	$("#article_content3_2").html(string_content[9]);
 
 
-	$("#article_title3_1").html(string_title[10]);
-	$("#article_thumbnail3_1").html(string_thumbnail[10][0]);
-	$("#article_content3_1").html(string_content[10]);
+	$("#article_title3_3").html(string_title[10]);
+	$("#article_thumbnail3_3").html(string_thumbnail[10][0]);
+	$("#article_content3_3").html(string_content[10]);
 
 
-	$("#article_title3_1").html(string_title[11]);
-	$("#article_thumbnail3_1").html(string_thumbnail[11][0]);
-	$("#article_content3_1").html(string_content[11]);
+	$("#article_title3_4").html(string_title[11]);
+	$("#article_thumbnail3_4").html(string_thumbnail[11][0]);
+	$("#article_content3_4").html(string_content[11]);
 	},2000);
 
 	
