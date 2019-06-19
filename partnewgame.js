@@ -5,7 +5,6 @@
 var string_title1=new Array;
 var string_thumbnail=new Array;
 var string_content=new Array;
-var string_pic=new Array;
 
 
 
@@ -17,7 +16,6 @@ $(function(){
 	string_title=getJson_title("content_2000");
 	string_thumbnail=getJson_content("content_2000");
 	string_content=getJson_cURL("content_2000");
-	string_pic=getJson_cPIC("content_2000");
 
 	$("#article_title1_1").html(string_title[0]);
 	//$("#article_thumbnail1_1").html(string_thumbnail[0][0]);
@@ -41,6 +39,7 @@ $(function(){
 
 
 
+<<<<<<< HEAD
 	$("#article_title1_4").html(string_title[3]);
 	//$("#article_thumbnail1_4").html(string_thumbnail[3][0]);
 	$("#article_content1_4").html(string_content[3]);
@@ -48,6 +47,8 @@ $(function(){
 	$("#article_thumbnail1_4").css({"background":url3,"background-size":"100%"});
 
 
+=======
+>>>>>>> parent of 6a26e40... 디자인 제이슨 수정!
 	$("#article_title2-1").html(string_title[4]);
 	$("#content2-1-1-title").html(string_content[4][0]);
 	// $("#content2-1-1-body")
