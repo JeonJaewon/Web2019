@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase.js"></script>
+	<script type="text/javascript" src="database.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="insertCoin.css">
+	<script type="text/javascript" src="insertCoin.js"></script>
+	<script type="text/javascript" src="onLike.js"></script>
+	<script type="text/javascript" src="Maxfunction.js"></script>
+	<script type="text/javascript" src="partnewgame.js"></script>
+	<script type="text/javascript" src="jsonFunction.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Gugi&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+
+	<title>Insert Coin</title>
+</head>
+<body>
+
+<!-- 	<div id="loading_body">
+		<img src="loading.gif" id="loading" style="width: 50%; height: 50%"/>
+	</div> -->
+
+	<!-- <div id="main_body"> -->
+
+	<div id="main_header">
+		<!-- bina added start-->
+		<img src="main.png">
+		<div id = "main_title"> Insert Coin</div>
+		<nav>
+			<ul>
+				<li><a href="#" id ="hottest">Hottest</a></li>
+				<li><a href="#" id ="newgame">New Game</a></li>
+				<li><a href="#" id = "gameengine">Game Engine</a></li>
+				<li><a href="#" id = "live">Live</a></li>
+				<li><a href="#" id ="esports">E-Sports</a></li>
+			</ul>
+		</nav>
+	<!-- bina added end -->
+	</div>
+
+	<div class="setting_button" id="settings_button">
+		<img src="settings.png" style="max-width: 100%; max-height: 100%"/>
+	</div>
+	<div class="setting_button" id="up_arrow_button">
+		<img src="up_arrow.png" style="max-width: 100%; max-height: 100%"/>
+	</div>
+	<div class="setting_button" id="night_mode_button">
+		<img src="night_mode.png" style="max-width: 100%; max-height: 100%"/>
+	</div> 
+		
+	<div id="slide_show" >
+		<img class="slide" id="slide1" style="background-color: yellow">
+		<img class="slide" id="slide2" style="background-color: red">
+		<img class="slide" id="slide3" style="background-color: green">
+		<div id="left_arrow">
+			<img src="left_arrow.png" style="max-width: 100%; max-height: 100%"/>
+		</div>
+		<div id="right_arrow">
+			<img src="right_arrow.png" style="max-width: 100%; max-height: 100%"/>
+		</div>
+	</div>
+		<!-- bina added start-->
+	<div class="article" id = "newgamespace">
+				<!-- <img src="newgame2.gif" width="101%" /> -->
+		<video loop muted autoplay="autoplay" width="100%">
+ 		 <source src="gamevideo.mp4" type="video/mp4" />
+		Your browser does not support the video tag.
+	</div>
+	<div class="article" style="overflow: hidden; text-align: center;" id = "gameenginespace">
+		<div><img src="unity.png" style="margin-top:2.5%; width: 20%; height: 20%; opacity: 0.9;"/></div>
+		<div style="height:100%;">
+			<div id ="article_title" style="margin-top: 1%; margin-bottom: 2%">
+				<span>MADE</span>
+				<span style="color:white">WITH</span>
+				<span style="color:black">UNITY</span>
+			</div>
+			<h2 style="color:white">START BRINGING YOUR VISION TO LIFE TODAY</h2>
+			<div class="article_menu" style="margin-top:3%; border-radius:7px; background-color:#990099; color:white;"> 
+			<a href="https://unity.com/kr/learn" target="_blank">LEARN UNITY IN UNITY.COM</a></div>
+			<div class="article_menu" style="margin-top:2%; border-radius:7px; background-color:#990099; color:white;">
+
+			<a href="https://assetstore.unity.com/g/top-assets-2018?gclid=Cj0KCQjwxYLoBRCxARIsAEf16-v-A61rbYmwVP-jSDbNsbjv_LTnXAReci3-H215PGlG3RJK73fICNgaAutJEALw_wcB" target="_blank">2018 TOP ASSETS IN ASSET STORE</a></div>
+			<div class="article_menu" id="gameengineButton" style="margin-top:2%; border-radius:7px; background-color:#990099;">
+			VIEW ALL CONTENTS
+			</div>
+		</div>
+	</div>
+	<div class="article" id = "livespace">
+		<div id="livearticle">
+			<img src="on_air.png"  id="onair" style="max-width: 100%; max-height: 100%"/>
+			<img src="live.jpg"  id="streamer"style="max-width: 100%; max-height: 100%"/>
+			<div id="live_left">
+				<div id="stream_now">STREAM NOW</div>
+			<div id="live_article_title">THIS-MONTH <br><span>RECOMMANDED&nbsp:)</span><br><div id="game_streamer">GAME STREAMER</div></div>
+			<div id= "live_article_text">
+				<!-- Just Be Here and Join Us -->
+			</div>
+			</div>
+			<div id="live_right">
+				<div class="live_article_menu"><a href="https://www.youtube.com/" style="color:ivory">YOUTUBE</a></div>
+				<div class="live_article_menu2">RECOMMANDED</div>
+				<div class="live_article_menu3"><a href="https://www.twitch.tv" style="color:ivory">TWITCH</a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="article" id = "esportsspace">
+		<img src="EsportsNoobs_Image1.jpg">
+		<div id = "esportsarticle">
+			<div id ="checkout">CHECK OUT</div>
+			<div id ="article_title">MOST POPULAR <Br><span>E-SPORTS</span> LEAGUE</div>
+			<div id ="article_text">What is your favorite game? <br>Then what is your favorite E-SPORTS LEAGUE?</div>
+			<div class = "article_menu"> E-Sports Schedule</div>
+			<div class="article_menu"> E-sports News </div>
+			<div id = "esportsbutton"> View All Contents</div>
+		</div>
+	</div>		
+		<!-- bina added end -->
+
+		<div class="article_partition" id="partition1"><!-- 4 분할 더 보기 기능 -->
+		<div class="small_article article1" id="article1-1">
+			<div class="article_title" id="article_title1_1">CardNews 1</div>
+			<div class="article_thumbnail" id="article_thumbnail1_1"></div> <!-- 미리보기 -->
+			<div class="article_content" id="article_content1_1"></div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+			</div>
+		</div>
+		<div class="small_article article2" id="article1-2">
+			<div class="article_title" id="article_title1_2">CardNews 1</div>
+			<div class="article_thumbnail" id="article_thumbnail1_2"></div> <!-- 미리보기 -->
+			<div class="article_content" id="article_content1_2"></div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article3" id="article1-3">
+			<div class="article_title" id="article_title1_3">CardNews 1</div>
+			<div class="article_thumbnail" id="article_thumbnail1_3"></div> <!-- 미리보기 -->
+			<div class="article_content" id="article_content1_3"></div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article4" id="article1-4">
+			<div class="article_title" id="article_title1_4">CardNews 1</div>
+			<div class="article_thumbnail" id="article_thumbnail1_4"></div> <!-- 미리보기 -->
+			<div class="article_content" id="article_content1_4"></div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+		<div class="article_partition" id="partition2"><!-- 4 분할 더 보기 기능 -->
+		<div class="small_article article1" id="article2-1">
+			<div class="article_title" id="article_title2-1"> - 악동 김블루</div>
+			<div class="article_thumbnail">
+				<img src="kimblue.png" class="streamer_card">
+			</div> <!-- 미리보기 -->
+			<div class="article_content">
+				<div id="streamer1_left">
+					<div id="introduce1" class="introduce">
+						
+					</div>
+					<div class="content2-1">
+						<div id="content2-1-1-title" class="content_title">
+							
+						</div>
+						<div id="content2-1-1-body">
+							<a id="article_link2-1-1"><img id="article_img2-1-1" style="max-width : 100%; max-height:100%;"></a>
+							<a id="article_link2-1-2"><img id="article_img2-1-2" style="max-width : 100%; max-height:100%;"></a>
+						</div>
+					</div>
+					<div class="content2-1">
+						<div id="content2-1-2-title" class="content_title">
+							컨텐츠 제목 2
+						</div>
+						<div id="content2-1-2-body">
+							<a id="article_link2-1-3"><img id="article_img2-1-3" style="max-width : 100%; max-height:100%;"></a>
+							<a id="article_link2-1-4"><img id="article_img2-1-4" style="max-width : 100%; max-height:100%;"></a>
+						</div>
+					</div>
+					<div class="content2-1">
+						<div id="content2-1-3-title" class="content_title">
+							컨텐츠 제목 3
+						</div>
+						<div id="content2-1-3-body">
+							<a id="article_link2-1-5"><img id="article_img2-1-5" style="max-width : 100%; max-height:100%;"></a>
+							<a id="article_link2-1-6"><img id="article_img2-1-6" style="max-width : 100%; max-height:100%;"></a>
+						</div>
+					</div>
+				</div>
+				<div id="streamer1_right">
+					<img src="kimblue2.png">
+				</div>
+			</div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article2" id="article2-2">
+			<div class="article_title" id="article_title2-2">이것이 프로다 -EscA</div>
+			<div class="article_thumbnail">
+				<img src="esca.png" class="streamer_card">
+			</div> <!-- 미리보기 -->
+			<div class="article_content">
+				<div id="streamer2_left"></div>
+				<div id="streamer2_right">
+					<div id="introduce2" class="introduce">
+						
+						</div>
+					<div class="content2-2">
+						<div id="content2-2-1-title" class="content_title">
+							컨텐츠 제목 2-2-1
+						</div>
+						<div id="content2-2-1-body">
+							
+						</div>
+					</div>
+					<div class="content2-2">
+						<div id="content2-2-2-title" class="content_title">
+							컨텐츠 제목 2
+						</div>
+						<div id="content2-2-2-body">
+							<a id="article_link2-2-1"><img id="article_img2-2-1" style="max-width : 100%; max-height:100%;"></a>
+							<a id="article_link2-2-2"><img id="article_img2-2-2" style="max-width : 100%; max-height:100%;"></a>
+						</div>
+					</div>
+					<div class="content2-2">
+						<div id="content2-2-3-title" class="content_title">
+							컨텐츠 제목 3
+						</div>
+						<div id="content2-2-3-body">
+							<a id="article_link2-2-3"><img id="article_img2-2-3" style="max-width : 100%; max-height:100%;"></a>
+							<a id="article_link2-2-4"><img id="article_img2-2-4" style="max-width : 100%; max-height:100%;"></a>
+						</div>
+					</div>
+					<div class="content2-2">
+						<div id="content2-2-4-title" class="content_title">
+							컨텐츠 제목 3
+						</div>
+						<div id="content2-2-4-body">
+							<a id="article_link2-2-5"><img id="article_img2-2-5" style="max-width : 100%; max-height:100%;"></a>
+							<a id="article_link2-2-6"><img id="article_img2-2-6" style="max-width : 100%; max-height:100%;"></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article3" id="article2-3">
+			<div class="article_title" id="article_title2-3">배그는 상황극 아닌가요? - 혜안</div>
+			<div class="article_thumbnail">
+				<img src="hamm.png" class="streamer_card">
+			</div> <!-- 미리보기 -->
+			<div class="article_content">
+				<div id="streamer3_left">
+				<img src="hamm2.png">					
+				</div>
+				<div id="streamer3_right">
+					<div id="introduce3" class="introduce">
+						
+						</div>
+					<div class="content2-3">
+						<div id="content2-3-1-title" class="content_title">
+							컨텐츠 제목 2-2-1
+						</div>
+						<div id="content2-3-1-body">
+							<a id="article_link2-3-1"><img id="article_img2-3-1" style="max-width : 100%; max-height:100%;"></a>
+							<a id="article_link2-3-2"><img id="article_img2-3-2" style="max-width : 100%; max-height:100%;"></a>
+							<a id="article_link2-3-3"><img id="article_img2-3-3" style="max-width : 100%; max-height:100%;"></a>
+							<a id="article_link2-3-4"><img id="article_img2-3-4" style="max-width : 100%; max-height:100%;"></a>
+							<a id="article_link2-3-5"><img id="article_img2-3-5" style="max-width : 100%; max-height:100%;"></a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article4" id="article2-4">
+			<div class="article_title" id="article_title2-4">외쳐! 강!공!지!주! - 강지</div>
+			<div class="article_thumbnail">
+				<img src="ganggi.png" class="streamer_card">
+			</div> <!-- 미리보기 -->
+			<div class="article_content">
+				<div id="streamer4_left">
+					<div id="introduce4" class="introduce">
+						
+					</div>
+					<div class="content2-4">
+						<div id="content2-4-1-title" class="content_title">
+							컨텐츠 제목 2-2-1
+						</div>
+						<div id="content2-4-1-body">
+							<a id="article_link2-4-1"><img id="article_img2-4-1" style="max-width : 100%; max-height:100%;"></a>
+							<a id="article_link2-4-2"><img id="article_img2-4-2" style="max-width : 100%; max-height:100%;"></a>
+							<a id="article_link2-4-3"><img id="article_img2-4-3" style="max-width : 100%; max-height:100%;"></a>
+							<a id="article_link2-4-4"><img id="article_img2-4-4" style="max-width : 100%; max-height:100%;"></a>
+							<a id="article_link2-4-5"><img id="article_img2-4-5" style="max-width : 100%; max-height:100%;"></a>
+						</div>
+					</div>
+					
+				</div>
+				<div id="streamer4_right">
+					<img src="ganggi2.png">
+				</div>
+			</div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+		<div class="article_partition" id="partition3"><!-- 4 분할 더 보기 기능 -->
+		<div class="small_article article1" id="article3-1">
+			<div class="article_title" id="article_title3_1">CardNews 1</div>
+			<div class="article_thumbnail" id="article_thumbnail3_1">미리보기 글씨</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article2" id="article3-2">
+			<div class="article_title" id="article_title3_2">CardNews 2</div>
+			<div class="article_thumbnail" id="article_thumbnail3_2">
+				<img id="article_content3_2" style="max-width: 100%; max-height: 100%; float: left;">
+			</div> <!-- 미리보기 -->
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article3" id="article3-3">
+			<div class="article_title" id="article_title3_3">CardNews 3</div>
+			<div class="article_thumbnail" id="article_thumbnail3_3">
+				<img id="article_content3_3" style="max-width: 100%; max-height: 100%; float: left;">
+			</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="small_article article4" id="article3-4">
+			<div class="article_title" id="article_title3_4">CardNews 4</div>
+			<div class="article_thumbnail" id="article_thumbnail3_4">
+				<img id="article_content3_4" style="max-width: 100%; max-height: 100%; float: left;">
+			</div> <!-- 미리보기 -->
+			<div class="article_content"></div>
+			<div class="go_back_arrow">
+				<img src="go_back_arrow.png" style="max-width: 100%; max-height: 100%"/>
+			</div>
+			<div class="article_status">
+				<div class="like_counter">
+				<img src="like.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="like"></span>
+				</div>
+				<div class="watch_counter">
+				<img src="watch.png" style="max-width: 100%; max-height: 100%"/>
+				<span class="watch"></span>
+				</div>
+
+			</div>
+		</div>
+	</div> 
+
+
+
+	<div class="article_partition" id = "partition4" ><!-- 4 분할 더 보기 기능 -->
+		<div id = "esports_section">
+			<div id = "esports_section_left">
+				<div id ="esports_section_title"> E-SPORTS</div>
+				<div id = "esports_description">  </div>
+			</div>
+			<div id = "esports_section_right">
+				<div id ="date">
+					<span id="month"></span> 
+					<span id = "week"></span> 
+				</div>
+
+				<button class = "btn-1">
+					LCK SCHEDULE
+				</button>
+				<button class = "btn-2">
+					STAR2 SCHEDULE
+				</button>
+				<button class = "btn-3">
+					OVERWATCH SCHEDULE
+				</button>
+				<button class = "btn-4">
+					Latest News
+				</button>
+				<button class = "btn-5">
+					Inven 
+				</button>
+			</div>
+		</div>
+		<div class = "imgcover"></div>
+	</div>
+
+<!-- </div> -->
+</body>
+
+
+
+<!-- ______THIS PART IS FOR DATABASE CONNECTION______ -->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB23eupCYrLa_MjURxM3U7NA7LerL3OfmE",
+    authDomain: "webtest-3663d.firebaseapp.com",
+    databaseURL: "https://webtest-3663d.firebaseio.com",
+    projectId: "webtest-3663d",
+    storageBucket: "webtest-3663d.appspot.com",
+    messagingSenderId: "635235171221",
+    appId: "1:635235171221:web:df2702c0c9d4f512"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-database.js"></script>
+
+<!-- ______THIS PART IS FOR DATABASE CONNECTION______ -->
+</html>
