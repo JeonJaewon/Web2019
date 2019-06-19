@@ -90,6 +90,14 @@
 "cURL":"",
 "cPIC":["article3_3.png"],
 "content":["길건너 친구들은 2015년 발매된 모바일 게임입니다. 호주 출신의 3명의 개발자가 만든 게임으로 간단한 게임성과 특유의 중독성으로 큰 인기를 얻었습니다. 이 게임도 멀티 플랫폼으로 발매되어 유니티의 장점을 잘 활용한 게임이라고 할 수 있겠습니다. 또 유니티 애즈를 활용하여 굉장한 광고 수익을 올렸습니다. 앱스토어 런칭 90일만에 광고 수익으로만 30억원을 올렸다고 합니다. 3명이 개발한 소규모 프로젝트지만 엔진을 잘 활용했고, 또 게임에 방해되지 않는 선에서 광고를 통한 수익을 얻어 상업적으로도 큰 성공을 이룬 게임의 대표적인 예로 들 수 있습니다.이렇게 유니티로 개발된 세 가지 게임을 알아보았습니다. 이 게임들이 유니티를 개발 엔진으로 선택한 이유, 활용한 방법들을 참고하면 훨씬 더 좋은 게임을 개발할 수 있지 않을까 하는 생각이 듭니다."]
+},
+{
+"title" : "esports",
+"cID":"content_1012",
+"cURL":"",
+"cPIC":"",
+"content":"E-sports  is a form of competition using video games.<br><br>Most commonly, esports takes the form of organized, multiplayer video game competitions, particularly between professional players, individually or as teams. <br><br>Although organized online and offline competitions have long been a part of video game culture,these were largely between amateurs until the late 2000s, when participation by professional gamers and spectatorship in these events through live streaming saw a large surge in popularity.<br><br>By the 2010s, esports was a significant factor in the video game industry, with many game developers actively designing toward a professional esports subculture."
 }
+
 
 ]
