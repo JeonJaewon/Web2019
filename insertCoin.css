@@ -357,6 +357,8 @@ nav ul li a:focus {
 	padding:2% 0 0 2%;
 	position:relative;
 	background-color:black;
+	font-family: 'Nanum Gothic Coding', monospace;
+	line-height:150%;
 }
 
 .small_article{
@@ -367,7 +369,6 @@ nav ul li a:focus {
 	height:35%;
 	text-align:center;
 	background-color: white;
-	border:1px dotted black;
 	z-index: 10;
 	overflow:hidden;
 }
@@ -376,12 +377,13 @@ nav ul li a:focus {
 	margin : 3% 0 3% 1%;
 	width:60%;
 	color: black;
-	font-size: 150%;
+	font-size: 200%;
 	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
 	height:8%;
 	font-family: 'Gugi', cursive;
+	display:none;
 	/*background-color:orange;*/
 	/*background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,90,1) 0%, rgba(238,79,119,1) 79%, rgba(238,79,138,1) 100%);*/
 }
@@ -391,8 +393,8 @@ nav ul li a:focus {
 	/*padding-top:  5%;
 	padding-bottom: 5%;*/
 	text-align: center;
-	height: 80%;
-	width: 95%;
+	height: 100%;
+	width: 100%;
 	margin:0 auto;
 	color: white;
 	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,79,138,1) 0%, rgba(238,79,119,1) 21%, rgba(238,79,90,1) 100%);
@@ -414,6 +416,8 @@ nav ul li a:focus {
 	/*border:2px solid rgba(236, 54, 66, 1);*/
 	background-color: orange;
 	position:relative;
+	font-family: 'Nanum Gothic Coding', monospace;
+	text-align:left;
 }
 #streamer1_left{
 	float:left;
@@ -432,10 +436,11 @@ nav ul li a:focus {
 .article_status{
 	position: absolute;
 	overflow: hidden;
-	height: 6%;
+	height: 7%;
 	width: 25%;
 	right: 3%;
 	top: 8%;
+	color:white;
 	/*background-color: rgb(255,192,0);*/
 }
 .like_counter{	
@@ -685,17 +690,34 @@ button:hover {
 
 .content2-1{
 	margin:5% 0 5% 3%;
-	height:30%;
+	height:auto;
 	width:100%;
-	background-color:white;
-	color:blue;
+	background-color: rgb(31,78,121);
+	color:white;
 }
 #streamer1_left{
 	width:70%;
 	height:100%;
 }
 #article2-1>.article_content{
-	background-color: skyblue;
+	background-color: rgb(31,78,121);
+}
++#article2-3>.article_content{
+	background-color: rgb(56,87,35);
+}
+#article2-4>.article_content{
+	background-color: rgb(51,63,80);
+}
+#streamer2_right{
+	float:right;
+	width:55%;
+}
+#streamer1_left>img{
+	width:70%;
+
+}
+#article2-1{
+	background-color:white;
 }
 #article2-2>.article_content>img{
 	width:100%;
@@ -712,6 +734,7 @@ button:hover {
 }
 #streamer3_left{
 	float:left;
+		width:30%;
 }
 #streamer3_right{
 	float:right;
@@ -719,31 +742,42 @@ button:hover {
 }
 #streamer4_left{
 	float:left;
-	width:60%;
+	width:100%;
 }
 #streamer4_right{
-	float:right;
+	width:0;
+	display:none;
 }
 .content2-3{
 	margin:5% 0 5% 3%;
 	height:30%;
 	width:100%;
 	color:white;
-	background-color:pink;
+	background-color: rgb(56,87,35);
 }
 .content2-4{
 	margin:5% 0 5% 3%;
 	height:30%;
 	width:100%;
 	color:white;
-	background-color:skyblue;
+	background-color: rgb(51,63,80);
 }
-#introduce1{
+.introduce{
 	width:100%;
-	height:50%;
+	height:auto;
 	word-break:break-all;
-	margin:5% 0 5% 3%;
-	background-color:blue;
+	margin:5% 3% 5% 3%;
+	/*background-color:rgb(191,191,191);*/
+}
+#partition2{
+	/*background-image:url("newspaper_background.png");
+	background-repeat:no-repeat;
+	background-size: 100% 110%;*/
+}
+.content_title{
+	font-size:1.5em;
+	font-weight:bold;
+	margin-bottom:3%;
 }
 #partition2{
 	/*background-image:url("newspaper_background.png");
